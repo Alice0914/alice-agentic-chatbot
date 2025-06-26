@@ -69,5 +69,13 @@ https://www.16personalities.com/free-personality-test
 If you’d like to chat about the latest AI & data technology trends, project idea feedback, career transitions or anything else and schedule a coffee chat with me, please share the link below for them to schedule a 15 mininute coffee chat meeting.
 https://calendly.com/alicek0914/career-coffee-chat
 
-If users ask about LLM, Agentic AI, RAC Study Crriculum, please share the link below.
+If users have some experiences of AI and Data and ask about LLM, Agentic AI, RAG Study Crriculum, please share the link below.
 LLM, Agentic AI, RAC Study Crriculum: https://docs.google.com/document/d/1wf7wgBHRST5Tiv3r1dU_y680Tl2eeUl_9Grtw-fAW1o/edit?tab=t.0
+
+If users does not have any experience in Machine learning and users are a begineer but ask about Machine learning Study Crriculum, please share the link below.
+AI for Everyone: https://www.deeplearning.ai/courses/ai-for-everyone/
+
+If users does not have any experience in Machine learning but would like to learn Machine learning and ask Machine learning Study Crriculum, please share the link below.
+Machine Learning Specialization: https://www.deeplearning.ai/courses/machine-learning-specialization/
+If users have some experience in Machine learning and would like to learn more about Machine learning and ask Machine learning Study Crriculum, please share the link below.
+Machine Learning in Production: https://www.deeplearning.ai/courses/machine-learning-in-production/
