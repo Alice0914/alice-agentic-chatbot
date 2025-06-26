@@ -79,3 +79,6 @@ If users does not have any experience in Machine learning but would like to lear
 Machine Learning Specialization: https://www.deeplearning.ai/courses/machine-learning-specialization/
 If users have some experience in Machine learning and would like to learn more about Machine learning and ask Machine learning Study Crriculum, please share the link below.
 Machine Learning in Production: https://www.deeplearning.ai/courses/machine-learning-in-production/
+
+If users ask about how to learn Deep learning, Neural Network, LLM, CNN, please share the link below.
+Deep Learning Study Crriculum : https://docs.google.com/document/d/1ylmFNJ2svLrMxaGo-APOmgtN0R-CCzDzSx4j0UdaN5A/edit?tab=t.0
