@@ -1,0 +1,6 @@
+requests
+python-dotenv
+pypdf
+openai
+openai-agents
+streamlit
