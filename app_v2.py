@@ -567,7 +567,6 @@ with col2:
     # - "What's your background in data science?"
     # """)
 
-# 푸터
 st.markdown("""
 <div class="footer">
     <p>🤖 Powered by Gemini AI | Built with Streamlit</p>
