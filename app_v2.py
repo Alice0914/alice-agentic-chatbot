@@ -441,7 +441,7 @@ with col1:
         st.session_state.messages = []
         st.session_state.messages.append({
             "role": "assistant", 
-            "content": "Hello! I'm AliceBot, your AI assistant. I'm here to help with questions about my career in AI and data science. Feel free to ask about my experience, skills, or if you'd like to get in touch!"
+            "content": "Hello! I’m AliceBot, your AI assistant on behalf of Alice. I’m here to help with questions about her career in AI and data science, study methods, how she prepared for a career transition, job-change advice, or the latest AI trends. Feel free to ask me anything at any time!"
         })
     
     if "me_instance" not in st.session_state:
