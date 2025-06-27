@@ -241,7 +241,7 @@ st.markdown("""
 
 st.markdown("""
 <div class="main-header">
-    <h1>🤖 Alice - AI Assistant</h1>
+    <h1>🤖 AliceBot - AI Assistant</h1>
     <p>AI & Data Career Expert | Professional Consultant</p>
 </div>
 """, unsafe_allow_html=True)
