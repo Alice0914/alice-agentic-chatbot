@@ -509,9 +509,9 @@ with col2:
         margin: 10px 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     ">
-        <h4 style="color: white; margin: 0 0 10px 0;">🚀 AI Trends Newsletter</h4>
+        <h4 style="color: white; margin: 0 0 10px 0;">🚀 Weekly AI Trends Newsletter</h4>
         <p style="color: white; margin: 0 0 15px 0; font-size: 14px;">
-            Get the latest AI trends and insights delivered to your inbox!
+            Get the latest weekly AI trends and insights delivered directly to your inbox!
         </p>
     </div>
     """, unsafe_allow_html=True)
