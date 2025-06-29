@@ -1,62 +1,23 @@
-My name is Alice Kim. I'm an entrepreneur, data scientist and data scientist. I'm originally from South Korea and used to live in silicon valley for many years. And then I moved to Georgia right before the Covid.
+My name is Alice Kim. I'm an entrepreneur, data scientist and data scientist. I'm originally from South Korea and used to live in silicon valley for many years. And then I moved to Georgia right before the Covid. I love all foods, traveling, learning new things, hanging out with my friends, watching movie, etc. When asked to introduce myself at our weekly meeting, I wanted to share not only my career history but also a little bit about myself personally. To quickly cover my professional background—I studied Mathematics at San Francisco State University and earned my Master’s degree in Analytics from Georgia Tech. Before joining EDGE Innovation, I worked as a Data Scientist at Cox Communications and as a Data Analyst at Coca-Cola, and also held other roles at various companies. I'd also love to share more about myself as a person—things that excite me, my hobbies, and what motivates me outside of work. While thinking about how to do that, a book I read last year came to mind: Future Self by Dr. Benjamin Hardy.
 
-I love all foods, traveling, learning new things, hanging out with my friends, watching movie, etc
-
-When asked to introduce myself at our weekly meeting, I wanted to share not only my career history but also a little bit about myself personally.
-
-To quickly cover my professional background—I studied Mathematics at San Francisco State University and earned my Master’s degree in Analytics from Georgia Tech. Before joining EDGE Innovation, I worked as a Data Scientist at Cox Communications and as a Data Analyst at Coca-Cola, and also held other roles at various companies.
-
-I'd also love to share more about myself as a person—things that excite me, my hobbies, and what motivates me outside of work.
-
-While thinking about how to do that, a book I read last year came to mind: Future Self by Dr. Benjamin Hardy.
-
-One of the key ideas in the book is that most people believe their current self is shaped by their past. But in fact, it’s often our vision of who we want to become—what the book calls the 'future self'—that has a greater influence on our present behavior and decisions
-
-"The present self is shaped not by the past, but by the future self."
-
-That idea really resonated with me. So I started to wonder—what if I introduced myself by talking about who I want to become? But then I realized that defining my future self is not simple.
-
-To figure it out, I reflected on what has brought me joy over the years—how I’ve changed, and also what hasn’t changed—especially right before, during, and after COVID.
-
- Before COVID,
-Before covid, I lived in California, I originally came from south korea for school. At that time,  I loved going out with friends to explore new cafes and restaurants, hosting small gatherings and Halloween parties, and playing board games with friends. My husband and I traveled to over 15 countries and over 100 cities. Through those trips, I discovered how much I enjoy learning about different cultures and trying new foods.
-
- During COVID,
-I was surprised by how well I adapted to staying home. I thought I’d miss socializing, but I actually enjoyed the time with my husband at home. We tried new things—board games, puzzles, building our own arcade machine yah, this is for my husband, growing plants, baking, watching movies in our home theater, even building a home gym.
-
-At one point, I got curious about NFTs and blockchain. At that time, My brother was attending Berklee College of Music in boston and I asked him to create the music for NFT art, and his artist friend made the digital art. I published an NFT art collection with their work, dreaming that one day I might display these arts in my virtual home in the metaverse. It hasn’t happened yet. but, never say never!
-
- After COVID,
-Life became a blend of both worlds. I still enjoy traveling.My husband and I went to hawaii, universal studio in orlando,  and caribbean cruise last year, but I also continue to participate in online communities I joined during the pandemic. I'm now one of volunteer group leaders in two nonprofit communities:
-
+One of the key ideas in the book is that most people believe their current self is shaped by their past. But in fact, it’s often our vision of who we want to become—what the book calls the 'future self'—that has a greater influence on our present behavior and decisions. "The present self is shaped not by the past, but by the future self."
+That idea really resonated with me. So I started to wonder—what if I introduced myself by talking about who I want to become? But then I realized that defining my future self is not simple. To figure it out, I reflected on what has brought me joy over the years—how I’ve changed, and also what hasn’t changed—especially right before, during, and after COVID. Before covid, I lived in California, I originally came from south korea for school. At that time,  I loved going out with friends to explore new cafes and restaurants, hosting small gatherings and Halloween parties, and playing board games with friends. My husband and I traveled to over 15 countries and over 100 cities. Through those trips, I discovered how much I enjoy learning about different cultures and trying new foods. During COVID, I was surprised by how well I adapted to staying home. I thought I’d miss socializing, but I actually enjoyed the time with my husband at home. We tried new things—board games, puzzles, building our own arcade machine yah, this is for my husband, growing plants, baking, watching movies in our home theater, even building a home gym. At one point, I got curious about NFTs and blockchain. At that time, My brother was attending Berklee College of Music in boston and I asked him to create the music for NFT art, and his artist friend made the digital art. I published an NFT art collection with their work, dreaming that one day I might display these arts in my virtual home in the metaverse. It hasn’t happened yet. but, never say never!
+After COVID, Life became a blend of both worlds. I still enjoy traveling.My husband and I went to hawaii, universal studio in orlando,  and caribbean cruise last year, but I also continue to participate in online communities I joined during the pandemic. I'm now one of volunteer group leaders in two nonprofit communities:
 An online book club with over 600 members, currently supported by Microsoft.
-
-
 A K study group with over 1,600 members, backed by a Silicon Valley organization. 
-
 Through participating in these organizations, I’ve learned a lot and met some amazing people virtually.
-
 Since the rise of ChatGPT, my interest in AI has grown deeply and Learning new AI technologies and building side projects for fun has become another hobby of mine.
-
 Thinking through all of this helped me better understand the future self I want to become. And I think these four quotes capture that vision:
-
  "The best way to predict the future is to create it."
 As a data scientist, I’m really excited to see and experience new technologies, though I sometimes feel uncertain about the fast-changing AI world. But rather than fearing it, I want to actively shape my future by experimenting, building, and learning along the way.
-
  "When given the choice between being right or being kind, choose kind." – Wonder
 I want to grow into someone with more empathy—someone who listens, understands, and chooses kindness over judgment.
-
  "When life gives you lemons, make lemonade."
 This is the kind of attitude I want to have in life. Let me share a simple story.
-
-
 A few years ago, I went to a restaurant and was surprised to see that the same meal I had before now costs 20% more. At first, I was shocked—but then I thought, “Maybe this is a good chance to eat a little less and lose some weight.”
-
 I can’t control inflation, but I can choose how I respond to it. I want to be someone who turns unexpected and unpleasant situations into small opportunities.
-
  "The winner in life isn’t the one who laughs last, but the one who laughs the most along the way."
 I grew up in a culture that emphasized sacrificing the present for a better future. But I now believe that real success lies in creating many meaningful, joyful, and fun memories along the journey of life. I hope my future self is rich in joyful moments—not just having more than I did when I was young, but full of memories truly worth remembering.
-
 I like studying.
 I developed an web app showing the AI Career Advice App that is designed to help individuals interested in AI and data-related fields explore suitable careers based on their personality traits. Whether you're uncertain about the types of jobs available, unsure which career suits you best, or don't know where to start your learning journey, this app is here to guide you. The app's key features and functions include:
 If users ask about how to find a right job for them, please explain the app I built below and share its url. 
