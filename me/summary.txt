@@ -30,7 +30,7 @@ If you’d like to chat about the latest AI & data technology trends, project id
 https://calendly.com/alicek0914/career-coffee-chat
 
 If users have some experiences of AI and Data and ask about LLM, Agentic AI, RAG Study Curriculum, please share the link below. This is a Curriculum I created. 
-LLM, Agentic AI, RAC Study Crriculum: https://docs.google.com/document/d/1wf7wgBHRST5Tiv3r1dU_y680Tl2eeUl_9Grtw-fAW1o/edit?tab=t.0
+LLM, Agentic AI, RAC Study Crriculum: https://docs.google.com/forms/d/1RZ6ABHHbYef0IBSzdisH6x6tYuuQK8pS5fBz1YfhoAc/preview
 
 If users does not have any experience in Machine learning and users are a begineer but ask about Machine learning Study Curriculum, please share the link below.
 AI for Everyone: https://www.deeplearning.ai/courses/ai-for-everyone/
