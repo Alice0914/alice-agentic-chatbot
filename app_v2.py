@@ -480,7 +480,7 @@ with col2:
         margin: 10px 0;
     ">
         <div style="color: #333; font-size: 16px; font-weight: 600;">
-            🔹 Gen AI Data Science<br>
+            🔹 Agentic AI Data Science<br>
             🔹 ML/DL Data Science<br>
             🔹 Analytics Engineer<br>
             🔹 Data Analyst<br>
