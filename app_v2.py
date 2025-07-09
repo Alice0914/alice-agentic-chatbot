@@ -518,7 +518,7 @@ with col2:
     
     st.markdown("""
     <div style="text-align: center; margin: 15px 0;">
-        <a href="https://docs.google.com/forms/d/1RZ6ABHHbYef0IBSzdisH6x6tYuuQK8pS5fBz1YfhoAc/preview" 
+        <a href="https://docs.google.com/forms/d/1RZ6ABHHbYef0IBSzdisH6x6tYuuQK8pS5fBz1YfhoAc/viewform?edit_requested=true" 
            target="_blank" 
            style="
                display: inline-block;
