@@ -1,12 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List
 from chatbot import Me
 
 app = FastAPI(title="AliceBot API", version="1.0.0")
 
-# CORS configuration for React dev server
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173", "http://localhost:5175", "http://localhost:3000", "http://127.0.0.1:5173", "http://127.0.0.1:5175"],
@@ -15,15 +14,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize chatbot instance on startup
-me_instance = None
-
-@app.on_event("startup")
-async def startup_event():
-    global me_instance
-    print("Initializing AliceBot...")
-    me_instance = Me()
-    print("AliceBot ready!")
+me_instance = Me()
 
 class ChatMessage(BaseModel):
     role: str
@@ -38,9 +29,6 @@ class ChatResponse(BaseModel):
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
-    if me_instance is None:
-        raise HTTPException(status_code=503, detail="Chatbot not initialized")
-    
     try:
         history = [{"role": msg.role, "content": msg.content} for msg in request.history]
         response = me_instance.chat(request.message, history)
@@ -51,7 +39,7 @@ async def chat(request: ChatRequest):
 
 @app.get("/api/health")
 async def health_check():
-    return {"status": "ok", "bot_ready": me_instance is not None}
+    return {"status": "ok", "bot_ready": True}
 
 if __name__ == "__main__":
     import uvicorn
