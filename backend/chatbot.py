@@ -3,7 +3,7 @@ from openai import OpenAI
 import json
 import os
 import requests
-from pypdf import PdfReader
+from rag import RAGPipeline
 
 load_dotenv(override=True)
 
@@ -70,32 +70,28 @@ tools = [{"type": "function", "function": record_user_details_json},
 
 class Me:
     def __init__(self):
-        google_api_key = os.getenv('GOOGLE_API_KEY', 'DUMMY_KEY')
         self.gemini = OpenAI(
-            api_key=google_api_key, 
+            api_key=os.getenv("GOOGLE_API_KEY", "DUMMY_KEY"),
             base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
         )
         self.model_name = "gemini-2.0-flash"
         self.name = "Alice"
-        
-        # Resolve paths relative to project root (one level up from backend/)
+
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        
+        docs_dir = os.path.join(base_dir, "me")
+
         try:
-            reader = PdfReader(os.path.join(base_dir, "me", "linkedin.pdf"))
-            self.linkedin = ""
-            for page in reader.pages:
-                text = page.extract_text()
-                if text:
-                    self.linkedin += text
-        except FileNotFoundError:
-            self.linkedin = "LinkedIn profile not available"
-                
-        try:
-            with open(os.path.join(base_dir, "me", "summary.txt"), "r", encoding="utf-8") as f:
+            with open(os.path.join(docs_dir, "summary.txt"), "r", encoding="utf-8") as f:
                 self.summary = f.read()
         except FileNotFoundError:
             self.summary = "Summary not available"
+
+        try:
+            self.rag = RAGPipeline(docs_dir)
+            print("RAG pipeline ready.")
+        except Exception as e:
+            print(f"RAG initialization failed: {e}")
+            self.rag = None
 
     def handle_tool_call(self, tool_calls):
         results = []
@@ -111,41 +107,48 @@ class Me:
                 "tool_call_id": tool_call.id
             })
         return results
-    
-    def system_prompt(self):
-        system_prompt = f"""
-You are acting as {self.name}. You are answering questions on {self.name}'s website and AI- and data-related career questions, particularly those about {self.name}'s career, background, skills, and experience.
-Your responsibility is to represent {self.name} for interactions on the website as faithfully as possible. You have been given a summary of {self.name}'s background and LinkedIn profile which you can use to answer questions.
+
+    def system_prompt(self, query=None):
+        rag_context = ""
+        if self.rag and query:
+            try:
+                rag_context = self.rag.retrieve(query)
+            except Exception as e:
+                print(f"RAG retrieval failed: {e}")
+
+        prompt = f"""You are acting as {self.name}. You are answering questions on {self.name}'s website and AI- and data-related career questions, particularly those about {self.name}'s career, background, skills, and experience.
+Your responsibility is to represent {self.name} for interactions on the website as faithfully as possible.
 Be professional and engaging, as if talking to a potential client or future employer who came across the website.
 
 If the user asks about something unrelated to {self.name}'s career, background, skills, or experience, tell them you're not sure and that you can send a text message to {self.name} if they'd like—you can collect their email with the `record_user_details` tool.
-If you don't know the answer to any question, record it with `record_unknown_question` (even if it's trivial), and offer to check with {self.name}—again collecting their email if needed.
-"""
+If you don't know the answer to any question, record it with `record_unknown_question` (even if it's trivial), and offer to check with {self.name}—again collecting their email if needed."""
 
-        system_prompt += f"\n\n## Summary:\n{self.summary}\n\n## LinkedIn Profile:\n{self.linkedin}\n\n"
-        system_prompt += f"With this context, please chat with the user, always staying in character as {self.name}."
-        return system_prompt
+        prompt += f"\n\n## Summary:\n{self.summary}\n\n"
+
+        if rag_context:
+            prompt += f"## Relevant Background Information:\n{rag_context}\n\n"
+
+        prompt += f"With this context, please chat with the user, always staying in character as {self.name}."
+        return prompt
 
     def chat(self, message, history):
-        messages = [{"role": "system", "content": self.system_prompt()}]
-        
+        messages = [{"role": "system", "content": self.system_prompt(query=message)}]
+
         for msg in history:
-            if msg["role"] == "user":
-                messages.append({"role": "user", "content": msg["content"]})
-            elif msg["role"] == "assistant":
-                messages.append({"role": "assistant", "content": msg["content"]})
-        
+            if msg["role"] in ("user", "assistant"):
+                messages.append({"role": msg["role"], "content": msg["content"]})
+
         messages.append({"role": "user", "content": message})
-        
+
         done = False
         while not done:
             try:
                 response = self.gemini.chat.completions.create(
-                    model=self.model_name, 
-                    messages=messages, 
+                    model=self.model_name,
+                    messages=messages,
                     tools=tools
                 )
-                
+
                 if response.choices[0].finish_reason == "tool_calls":
                     message = response.choices[0].message
                     tool_calls = message.tool_calls
@@ -154,9 +157,9 @@ If you don't know the answer to any question, record it with `record_unknown_que
                     messages.extend(results)
                 else:
                     done = True
-                    
+
             except Exception as e:
                 print(f"Error with Gemini API: {e}")
                 return "Sorry, the system is currently experiencing an issue. Please try again in a moment."
-                
+
         return response.choices[0].message.content

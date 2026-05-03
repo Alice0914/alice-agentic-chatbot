@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
+import MobileProfile from './components/MobileProfile'
 import ChatWindow from './components/ChatWindow'
 import ChatInput from './components/ChatInput'
 import './App.css'
@@ -22,7 +23,8 @@ function App() {
     setIsProcessing(true)
 
     try {
-      const response = await fetch('/api/chat', {
+      const API_BASE = import.meta.env.VITE_API_URL || ''
+      const response = await fetch(`${API_BASE}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +67,8 @@ function App() {
       
       <main className="main-content">
         <Header />
-        
+        <MobileProfile onClearChat={handleClearChat} />
+
         <div className="chat-area">
           <ChatWindow messages={messages} isProcessing={isProcessing} />
           <ChatInput onSendMessage={handleSendMessage} isProcessing={isProcessing} />
