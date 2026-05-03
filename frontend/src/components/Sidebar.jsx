@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { HiSparkles, HiChip, HiChartBar, HiTable, HiUserGroup, HiLightBulb, HiCode, HiTemplate } from 'react-icons/hi'
 import './Sidebar.css'
 
 export default function Sidebar({ onClearChat }) {
@@ -16,6 +17,15 @@ export default function Sidebar({ onClearChat }) {
       </button>
 
       <div className="sidebar-content">
+        {/* Profile Image */}
+        <section className="sidebar-section sidebar-profile">
+          <img
+            src="/alice-avatar.png.jpg"
+            alt="Alice"
+            className="profile-avatar"
+          />
+        </section>
+
         {/* About Section */}
         <section className="sidebar-section">
           <h3 className="section-title">
@@ -25,48 +35,39 @@ export default function Sidebar({ onClearChat }) {
           <div className="about-card glass">
             <div className="expertise-list">
               <div className="expertise-item">
-                <span className="expertise-dot"></span>
+                <HiCode className="expertise-icon" />
+                AI Engineer
+              </div>
+              <div className="expertise-item">
+                <HiTemplate className="expertise-icon" />
+                Agentic AI Systems Architect
+              </div>
+              <div className="expertise-item">
+                <HiSparkles className="expertise-icon" />
                 Agentic AI Data Science
               </div>
               <div className="expertise-item">
-                <span className="expertise-dot"></span>
+                <HiChip className="expertise-icon" />
                 ML/DL Data Science
               </div>
               <div className="expertise-item">
-                <span className="expertise-dot"></span>
+                <HiChartBar className="expertise-icon" />
                 Analytics Engineer
               </div>
               <div className="expertise-item">
-                <span className="expertise-dot"></span>
+                <HiTable className="expertise-icon" />
                 Data Analyst
               </div>
               <div className="expertise-item">
-                <span className="expertise-dot"></span>
+                <HiUserGroup className="expertise-icon" />
                 Career Consultant
               </div>
               <div className="expertise-item">
-                <span className="expertise-dot"></span>
+                <HiLightBulb className="expertise-icon" />
                 AI & Data Technical Consultant
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Schedule Section */}
-        <section className="sidebar-section">
-          <h3 className="section-title">
-            <span className="section-icon">📅</span>
-            Schedule a Meeting
-          </h3>
-          <a
-            href="https://calendly.com/alicek0914/career-coffee-chat"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sidebar-btn btn-gradient"
-            id="calendly-link"
-          >
-            📅 Book 15-30 min Meeting
-          </a>
         </section>
 
         {/* LinkedIn Section */}

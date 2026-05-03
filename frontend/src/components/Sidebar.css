@@ -1,3 +1,19 @@
+.sidebar-profile {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.profile-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color, #667eea);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
 .sidebar {
   width: 280px;
   min-width: 280px;
@@ -98,12 +114,12 @@
   font-weight: 400;
 }
 
-.expertise-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent-1);
+.expertise-icon {
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
+  color: #818cf8;
+  filter: drop-shadow(0 0 3px rgba(129, 140, 248, 0.5));
 }
 
 /* Buttons */
@@ -216,19 +232,6 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
   .sidebar {
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 100;
-    box-shadow: var(--shadow-lg);
-  }
-
-  .sidebar.collapsed {
-    width: 0;
-  }
-
-  .sidebar-toggle {
-    left: -36px;
+    display: none;
   }
 }

@@ -68,14 +68,16 @@
   background: transparent;
   border: none;
   color: var(--text-primary);
-  font-family: inherit;
-  font-size: 0.95rem;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
   line-height: 1.5;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   resize: none;
   min-height: 44px;
   max-height: 150px;
   outline: none;
+  letter-spacing: 0.01em;
 }
 
 .chat-textarea::placeholder {
