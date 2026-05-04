@@ -5,3 +5,5 @@ __pycache__/
 node_modules/
 frontend/dist/
 faiss_index/
+chroma_index/
+vector_index/
