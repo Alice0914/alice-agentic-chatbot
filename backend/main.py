@@ -1,3 +1,4 @@
+import threading
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -14,7 +15,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-me_instance = Me()
+me_instance: Me | None = None
+
+def _init_bot():
+    global me_instance
+    me_instance = Me()
+    print("Bot fully initialized.", flush=True)
+
+threading.Thread(target=_init_bot, daemon=True).start()
 
 class ChatMessage(BaseModel):
     role: str
@@ -29,6 +37,8 @@ class ChatResponse(BaseModel):
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
+    if me_instance is None:
+        raise HTTPException(status_code=503, detail="Bot is still initializing, please try again in a moment.")
     try:
         history = [{"role": msg.role, "content": msg.content} for msg in request.history]
         response = me_instance.chat(request.message, history)
@@ -39,7 +49,7 @@ async def chat(request: ChatRequest):
 
 @app.get("/api/health")
 async def health_check():
-    return {"status": "ok", "bot_ready": True}
+    return {"status": "ok", "bot_ready": me_instance is not None}
 
 if __name__ == "__main__":
     import uvicorn
