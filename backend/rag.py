@@ -9,7 +9,7 @@ INDEX_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 class RAGPipeline:
     def __init__(self, docs_dir: str):
         self.embeddings = GoogleGenerativeAIEmbeddings(
-            model="models/text-embedding-004",
+            model="models/embedding-001",
             google_api_key=os.getenv("GOOGLE_API_KEY")
         )
         self.vectorstore = self._load_or_build(docs_dir)
