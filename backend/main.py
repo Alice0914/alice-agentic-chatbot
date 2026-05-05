@@ -1,4 +1,5 @@
 import threading
+import requests as http
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -16,7 +17,8 @@ app.add_middleware(
 )
 
 me_instance: Me | None = None
-visit_count: int = 0
+
+FIREBASE_URL = "https://alicebot-5cd49-default-rtdb.firebaseio.com/visitors.json"
 
 def _init_bot():
     global me_instance
@@ -50,9 +52,14 @@ async def chat(request: ChatRequest):
 
 @app.post("/api/visit")
 async def record_visit():
-    global visit_count
-    visit_count += 1
-    return {"count": visit_count}
+    try:
+        current = http.get(FIREBASE_URL, timeout=5).json() or 0
+        new_count = current + 1
+        http.put(FIREBASE_URL, json=new_count, timeout=5)
+        return {"count": new_count}
+    except Exception as e:
+        print(f"Visit counter error: {e}")
+        return {"count": 0}
 
 @app.get("/api/health")
 async def health_check():
