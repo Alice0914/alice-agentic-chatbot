@@ -52,7 +52,7 @@ class Me:
         rag_context = ""
         if self.rag and query:
             try:
-                rag_context = self.rag.retrieve(query)
+                rag_context = self.rag.retrieve(query, k=10)
             except Exception as e:
                 print(f"RAG retrieval failed: {e}")
 
