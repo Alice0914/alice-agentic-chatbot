@@ -16,6 +16,7 @@ app.add_middleware(
 )
 
 me_instance: Me | None = None
+visit_count: int = 0
 
 def _init_bot():
     global me_instance
@@ -46,6 +47,12 @@ async def chat(request: ChatRequest):
     except Exception as e:
         print(f"Error in chat endpoint: {e}")
         raise HTTPException(status_code=500, detail="An error occurred while processing your request.")
+
+@app.post("/api/visit")
+async def record_visit():
+    global visit_count
+    visit_count += 1
+    return {"count": visit_count}
 
 @app.get("/api/health")
 async def health_check():

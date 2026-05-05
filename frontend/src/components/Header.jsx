@@ -1,6 +1,6 @@
 import './Header.css'
 
-export default function Header() {
+export default function Header({ visitCount }) {
   return (
     <header className="header" id="main-header">
       <div className="header-content">
@@ -10,6 +10,13 @@ export default function Header() {
             <p className="header-subtitle">AI &amp; Data Career Expert</p>
           </div>
         </div>
+        {visitCount !== null && (
+          <div className="visitor-counter">
+            <span className="visitor-icon">👁</span>
+            <span className="visitor-label">Visitors</span>
+            <span className="visitor-number">{visitCount.toLocaleString()}</span>
+          </div>
+        )}
       </div>
     </header>
   )

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import MobileProfile from './components/MobileProfile'
@@ -14,6 +14,15 @@ const initialMessage = {
 function App() {
   const [messages, setMessages] = useState([initialMessage])
   const [isProcessing, setIsProcessing] = useState(false)
+  const [visitCount, setVisitCount] = useState(null)
+
+  useEffect(() => {
+    const API_BASE = import.meta.env.VITE_API_URL || ''
+    fetch(`${API_BASE}/api/visit`, { method: 'POST' })
+      .then(r => r.json())
+      .then(data => setVisitCount(data.count))
+      .catch(() => {})
+  }, [])
 
   const handleSendMessage = async (userText) => {
     // Optimistically add user message
@@ -66,7 +75,7 @@ function App() {
       <Sidebar onClearChat={handleClearChat} />
       
       <main className="main-content">
-        <Header />
+        <Header visitCount={visitCount} />
         <MobileProfile onClearChat={handleClearChat} />
 
         <div className="chat-area">
