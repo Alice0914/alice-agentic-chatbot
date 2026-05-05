@@ -3,5 +3,5 @@ uvicorn[standard]
 python-dotenv
 pypdf
 openai
-langchain-google-genai>=2.0
 numpy
+requests
