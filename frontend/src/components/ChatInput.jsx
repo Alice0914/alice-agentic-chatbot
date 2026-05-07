@@ -32,9 +32,9 @@ export default function ChatInput({ onSendMessage, isProcessing }) {
     <div className="chat-input-container">
       <div className="suggested-prompts">
         {[
-          "Tell me about your AI experience",
           "AI & Data career transition tips?",
-          "Recommend an AI study path"
+          "Recommend an AI study path",
+          "What is AI Engineering and how do I study it?"
         ].map((promptText, index) => (
           <button 
             key={index} 

@@ -1,4 +1,5 @@
 import os
+import time
 import numpy as np
 import pickle
 import requests
@@ -20,6 +21,10 @@ def _split_text(text: str) -> list[str]:
     return [c for c in chunks if c.strip()]
 
 
+def _annotate(chunks: list[str], header: str) -> list[str]:
+    return [f"{header}\n\n{c}" for c in chunks]
+
+
 def _load_docs(docs_dir: str) -> list[str]:
     texts = []
     for filename in sorted(os.listdir(docs_dir)):
@@ -29,21 +34,23 @@ def _load_docs(docs_dir: str) -> list[str]:
             if ext == ".pdf":
                 with open(filepath, "rb") as f:
                     reader = pypdf.PdfReader(f)
-                    for page in reader.pages:
+                    for page_idx, page in enumerate(reader.pages, start=1):
                         page_text = page.extract_text() or ""
                         if page_text.strip():
-                            texts.extend(_split_text(page_text))
+                            header = f"[Source: {filename}, Page {page_idx}]"
+                            texts.extend(_annotate(_split_text(page_text), header))
                 print(f"  Loaded PDF: {filename}", flush=True)
             elif ext == ".txt":
                 with open(filepath, "r", encoding="utf-8") as f:
-                    texts.extend(_split_text(f.read()))
+                    header = f"[Source: {filename}]"
+                    texts.extend(_annotate(_split_text(f.read()), header))
                 print(f"  Loaded TXT: {filename}", flush=True)
         except Exception as e:
             print(f"  Skipped {filename}: {e}", flush=True)
     return texts
 
 
-def _embed_batch(texts: list[str], api_key: str) -> list[list[float]]:
+def _embed_batch(texts: list[str], api_key: str, max_retries: int = 5) -> list[list[float]]:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents?key={api_key}"
     body = {
         "requests": [
@@ -51,9 +58,17 @@ def _embed_batch(texts: list[str], api_key: str) -> list[list[float]]:
             for t in texts
         ]
     }
-    resp = requests.post(url, json=body, timeout=60)
-    resp.raise_for_status()
-    return [item["values"] for item in resp.json()["embeddings"]]
+    backoff = 30
+    for attempt in range(max_retries):
+        resp = requests.post(url, json=body, timeout=60)
+        if resp.status_code == 429:
+            print(f"  429 hit, backing off {backoff}s (attempt {attempt + 1}/{max_retries})", flush=True)
+            time.sleep(backoff)
+            backoff = min(backoff * 2, 120)
+            continue
+        resp.raise_for_status()
+        return [item["values"] for item in resp.json()["embeddings"]]
+    raise RuntimeError("Exceeded retries on embedding API")
 
 
 def _embed_query(query: str, api_key: str) -> list[float]:
@@ -89,6 +104,8 @@ class RAGPipeline:
             batch = texts[i:i + BATCH_SIZE]
             vectors.extend(_embed_batch(batch, self.api_key))
             print(f"  Embedded {min(i + BATCH_SIZE, len(texts))}/{len(texts)} chunks", flush=True)
+            if i + BATCH_SIZE < len(texts):
+                time.sleep(60)
 
         vectors = np.array(vectors, dtype=np.float32)
         os.makedirs(INDEX_DIR, exist_ok=True)

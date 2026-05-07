@@ -1,5 +1,19 @@
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import './MessageBubble.css'
+
+const BOOK_NAME = 'AI Engineering Book 2025 (490p)'
+
+function normalizeSources(text) {
+  if (!text) return text
+  return text.replace(
+    /\[Source:\s*AI[_\s]?Engineering[_\s]?2025[_\s]?490[pP](?:\.pdf)?\s*(,\s*(?:Page\s+-?\d+|Front matter))?\s*\]/gi,
+    (_, suffix) => {
+      const tail = suffix ? suffix.trim().replace(/^,\s*/, ', ') : ''
+      return `(${BOOK_NAME}${tail})`
+    }
+  )
+}
 
 export default function MessageBubble({ message, isTyping }) {
   if (isTyping) {
@@ -25,8 +39,15 @@ export default function MessageBubble({ message, isTyping }) {
           message.content
         ) : (
           <div className="markdown-body">
-            <ReactMarkdown>
-              {message.content}
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                a: ({ node, ...props }) => (
+                  <a {...props} target="_blank" rel="noopener noreferrer" />
+                ),
+              }}
+            >
+              {normalizeSources(message.content)}
             </ReactMarkdown>
           </div>
         )}

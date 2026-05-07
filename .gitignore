@@ -6,3 +6,6 @@ node_modules/
 frontend/dist/
 faiss_index/
 chroma_index/
+backend/_check.py
+backend/_check_output.txt
+backend/_last_prompt.txt

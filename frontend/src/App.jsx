@@ -25,7 +25,6 @@ function App() {
   }, [])
 
   const handleSendMessage = async (userText) => {
-    // Optimistically add user message
     const newMessage = { role: 'user', content: userText }
     const updatedMessages = [...messages, newMessage]
     setMessages(updatedMessages)
@@ -35,30 +34,59 @@ function App() {
       const API_BASE = import.meta.env.VITE_API_URL || ''
       const response = await fetch(`${API_BASE}/api/chat`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: userText,
-          // Exclude the last message since we're passing it as `message`
           history: messages.map(m => ({ role: m.role, content: m.content }))
         }),
       })
 
-      if (!response.ok) {
+      if (!response.ok || !response.body) {
         throw new Error('Network response was not ok')
       }
 
-      const data = await response.json()
-      
-      setMessages([...updatedMessages, { role: 'assistant', content: data.response }])
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+      let assistantContent = ''
+      let firstChunk = true
+
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        const chunk = decoder.decode(value, { stream: true })
+        if (!chunk) continue
+
+        assistantContent += chunk
+
+        if (firstChunk) {
+          firstChunk = false
+          setIsProcessing(false)
+          setMessages([...updatedMessages, { role: 'assistant', content: assistantContent }])
+        } else {
+          setMessages(prev => {
+            const next = [...prev]
+            next[next.length - 1] = { role: 'assistant', content: assistantContent }
+            return next
+          })
+        }
+      }
+
+      const tail = decoder.decode()
+      if (tail) {
+        assistantContent += tail
+        setMessages(prev => {
+          const next = [...prev]
+          next[next.length - 1] = { role: 'assistant', content: assistantContent }
+          return next
+        })
+      }
     } catch (error) {
       console.error('Error fetching chat response:', error)
       setMessages([
-        ...updatedMessages, 
-        { 
-          role: 'assistant', 
-          content: 'Sorry, I am experiencing some technical difficulties. Please ensure the backend server is running.' 
+        ...updatedMessages,
+        {
+          role: 'assistant',
+          content: 'Sorry, I am experiencing some technical difficulties. Please ensure the backend server is running.'
         }
       ])
     } finally {
