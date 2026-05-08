@@ -41,14 +41,134 @@ If users ask about how to learn Deep learning, Neural Network, LLM, CNN, please 
 Deep Learning Study Crriculum : https://docs.google.com/document/d/1ylmFNJ2svLrMxaGo-APOmgtN0R-CCzDzSx4j0UdaN5A/edit?usp=sharing
 
 If users ask about portfolio strategies or how to prepare for a career transition, please share the link below and advise them that it is often more beneficial to build one end-to-end, complicated application or project rather than developing multiple simple ones.
-project1: EcoMatch Interiors is a web app utilizing advanced AI technology via the Gemini API to analyze room images and provide personalized, eco-friendly interior design suggestions along with compatibility scores. It converts user text input into embedding vectors using an LLM model to ensure tailored recommendations. The app aims to enhance user satisfaction by offering expert-level insights to improve living spaces while positively impacting the environment.
+
+project 0:AI Trend 1-Minute
+AI Trend 1-Minute is a bilingual (English/Korean) web app that lets you catch the day's most important AI news in about a minute and share it to social media instantly. It auto-collects from nine sources — Anthropic, OpenAI, xAI, NVIDIA, MIT, TechCrunch and others — then runs a four-stage deduplication pipeline (embedding → LLM extraction → logical verification → cross-encoder) to keep only one article per story. A tournament-style scoring loop using Gemini 2.5 Pro and Grok 4.1 assigns each article a 0–100 impact score, so the must-read stories surface at the top of the feed, while top articles are auto-tagged, summarized, translated into Korean, and uploaded to Firestore. The React frontend lets users quickly filter by category, service, or core element and bookmark what they like. One-click sharing to Threads, X, LinkedIn, Reddit, and WhatsApp turns reading into sharing in seconds — from headline to post in under a minute.
+
+— End-to-End Process
+A bilingual (English/Korean) AI news curation app. A Python pipeline runs on a daily schedule to collect, deduplicate, score, tag, translate, and upload AI news to Firestore. A React frontend then serves that data as a personalized, one-minute readable feed.
+
+Step 1 — Parallel Collection
+The system collects AI news concurrently from multiple sources including AI labs, tech journalism websites, and AI news aggregators.
+All collected articles are normalized into a unified structure containing the title, content, source, URL, and publication date for downstream processing.
+The pipeline also performs content cleaning, metadata extraction, duplicate detection, and source prioritization. To improve reliability, each source is assigned an authority score, which is later used to resolve overlapping or duplicated news articles across different platforms.
+This helps create a cleaner and more trustworthy dataset for AI summarization, ranking, and recommendation workflows.
+
+Step 2 — Four-Stage Deduplication
+Because the same announcement is usually covered by multiple sources, the pipeline runs a four-stage dedup that balances recall (catching every duplicate) with precision (not collapsing unrelated stories that happen to share keywords). Stage 1 is a cheap fan-out: gemini-embedding-2-preview produces 768-dim title embeddings and any pair with cosine similarity above 0.92 becomes a candidate. Stage 2 sends the candidate pair's full content to gemini-2.5-flash, which extracts a structured record of {entities, event_type, product_name, date}. Stage 3 then applies a rule-based check that requires at least two of those four fields to match — this is what filters out look-alike but unrelated stories. Stage 4 confirms the survivors with a cross-encoder/stsb-roberta-large reranker, requiring a final score above 0.90. When a duplicate is confirmed, the article from the higher-priority source is kept and its exposure_score is incremented by one for each duplicate dropped — a signal that the whole industry is talking about this story.
+
+Step 3 — Tournament Scoring and Tagging
+Surviving articles are then run through a tournament-style scoring process that escalates compute only for promising candidates. Round 1 always runs gemini-2.5-pro for an initial 1–5 rating with reasoning. If that score is at least 3.0, Round 2 fetches an independent second opinion from xAI's grok-4-1-fast-reasoning. If the average of Rounds 1 and 2 is at least 4.0, Round 3 does a final verification pass with gemini-2.5-pro to confirm top-tier candidates. The mean star rating is multiplied by 20 to land on a 0–100 scale, then exposure_score * 2 is added as a bonus and the result is capped at 100. After scoring, articles are sorted by impactScore and passed to a gemini-2.5-flash tagging step that produces a clean title, a 2–3 sentence summary, three to five search keywords, and strict-allowlist tags for categories, productServices, and coreElements. To control cost, a why_it_matters blurb is generated only for the top 20 articles.
+
+Step 4 — Korean Translation and Final JSON
+The translator stage runs in backend/agents/processors/translator.py and combines two strategies. LLM translation via gemini-2.5-flash handles the free-text fields — title, summary, why_it_matters (when present), and searchKeywords — producing their *_ko counterparts with a prompt that keeps widely-used technical terms like "AI", "LLM", and "GPT" in English. The classification tags use deterministic map-based translation instead, looking up categories_ko, productServices_ko, and coreElements_ko directly from CATEGORY_MAP, SERVICE_MAP, and CORE_MAP in config.py — no LLM call needed, so the result is consistent across runs. A URL-safe id is generated by slugifying the title and appending the date, and publishedDate is normalized to YYYY-MM-DD. The full per-day output is saved to backend/data/final_data/final_news_output_<YYYYMMDD>.json.
+
+Step 5 — Firestore Upload
+The uploader appends each finalized article to the news_feeds/{YYYY-MM} document, storing the day's articles inside a news array field. The pipeline is meant to run on a smart schedule: on Mondays it pulls Saturday and Sunday together, on Tuesday through Saturday it pulls yesterday only, and on Sundays it doesn't run at all.
+
+Step 6 — Frontend Delivery
+The React app in src/pages/UserApp.jsx handles everything user-facing. Users sign in through Firebase Auth (Google, email, Twitter, or LinkedIn), then go through an onboarding flow where they select their preferred categories, services, and core elements. The feed view queries news_feeds/{YYYY-MM}, filters by date and the user's interests, and renders cards in impactScore order. i18next picks either the English fields or the *_ko fields depending on the user's language, so the same Firestore document drives both locales without a separate fetch. From there users can filter further, bookmark, like, and one-click share to Threads, X, LinkedIn, Reddit, or WhatsApp — the whole flow designed to surface the day's important AI news in about a minute.
+
+TL;DR: Collect from nine sources → 4-stage dedup → tournament scoring + tagging → Korean translation → Firestore upload → React feed with filtering and sharing.
+app link: https://ai-news-trend.vercel.app/
+
+project 1: SmartPlanner — App Overview
+What it is
+SmartPlanner is an AI-powered daily planner built around metacognition. Most planners only let you write down what you intend to do. SmartPlanner is different: every 15/30/60-minute slot has both a Planned field and an Actual field, side by side. You see in one glance the gap between what you said you would do and what you actually did — and that gap is where self-awareness grows.
+
+This "plan vs. actual" pairing is the foundation of the entire app. The AI coaching, weekly habit tracker, and efficiency metrics are all just structured reflections on that gap, designed to help you build accurate self-knowledge instead of vague guilt.
+
+The Core Idea: Metacognition Loop
+
+PLAN  →  DO  →  SEE THE GAP  →  AI REFLECTS WITH YOU  →  ADJUST  →  REPEAT
+Plan — block out your day in 30-min slots (morning, what you intend)
+Do — fill in the "actual" field as the day unfolds (or at end of day)
+See the gap — planned vs actual sit next to each other; you can't avoid noticing what slipped
+AI reflects — Gemini analyzes the gap and writes you a 3-4 sentence coaching message the next morning
+Adjust — the gap, named and explained, becomes data instead of shame
+This loop is what builds 메타인지 (metacognition) — knowing what you actually do, not what you imagine you do.
+
+Core Features
+Side-by-side Planned vs Actual schedule — the metacognitive heart of the app; visible mismatch every day
+Two-way Google Calendar sync — edits in the planner push to GCal; GCal events pull back in
+AI habit detection — Gemini decides which tasks are routines (Stretching, Reading) vs goals (Work, Project X)
+Weekly Habits Tracker — surfaces tasks you've repeated 3+ days that the AI flagged as habits
+Efficiency Metrics — planned vs. actual completion per category, switchable between task counts and hours (this is the gap, quantified)
+Time Distribution donut — visualizes your week across Productive / Maintenance / Recovery domains
+AI coaching feedback — daily morning message + weekly Sunday review, written like a behavioral science coach
+The Full Pipeline
+
+┌─────────────────────────────────────────────────────────────┐
+│ 1. USER INPUT (the metacognition loop)                      │
+│   Morning  → fill PLANNED slots (intent)                    │
+│   Day      → fill ACTUAL slots (reality)                    │
+│   Side-by-side display = visible self-awareness             │
+│   Stored in: users/{uid}/schedules/{date}.slots             │
+└─────────────────────────────────────────────────────────────┘
+                          │
+                          ▼ (debounced 2s)
+┌─────────────────────────────────────────────────────────────┐
+│ 2. GOOGLE CALENDAR SYNC (real-time)                         │
+│   • Merge consecutive same-task slots into one GCal event   │
+│   • PATCH existing / POST new / DELETE removed events       │
+└─────────────────────────────────────────────────────────────┘
+                          │
+                          ▼ (every morning, GitHub Actions cron)
+┌─────────────────────────────────────────────────────────────┐
+│ 3. DAILY AI ANALYSIS — analyze_habits.mjs                   │
+│   Reads PLANNED + ACTUAL together → quantifies the gap      │
+│                                                              │
+│   Track 1: text-embedding-004 → category classification     │
+│   Track 2: gemini-2.5-flash → structured JSON:              │
+│      • tasks[] with is_habit (routine vs goal)              │
+│      • categories (planned vs actual minutes per category)  │
+│      • gemini_feedback (coaches you on the gap)             │
+│                                                              │
+│   Saved to: users/{uid}/daily_analysis/{date}               │
+└─────────────────────────────────────────────────────────────┘
+                          │
+                          ▼ (Sundays only)
+┌─────────────────────────────────────────────────────────────┐
+│ 4. WEEKLY AI ANALYSIS — gemini-2.5-pro                      │
+│   Aggregate 7 days → "Where did intent and reality diverge  │
+│   most?" → last_week_review + advice_for_this_week[]        │
+└─────────────────────────────────────────────────────────────┘
+                          │
+                          ▼ (real-time onSnapshot)
+┌─────────────────────────────────────────────────────────────┐
+│ 5. FRONTEND (Next.js, page.tsx)                             │
+│   • Daily tab: planned/actual side-by-side                  │
+│   • Weekly Habits Tracker: what you actually built          │
+│   • Efficiency Metrics: planned vs actual, quantified gap   │
+│   • Time Distribution donut: where time really went         │
+└─────────────────────────────────────────────────────────────┘
+How is_habit Decides
+The AI is asked: "Is this building a routine, or completing a goal?"
+
+is_habit: true (routine)	is_habit: false (goal/necessity)
+Stretching, Meditation, Reading	Work, Coding, Meeting, Email
+Coding Practice, English Practice	"Gemini 4 Hackathon", "Planner App"
+Morning Routine, Night Plan, Journaling	Dinner, Commute, Sleep, Getting Ready
+Tech Stack
+Frontend — Next.js 16 (App Router) + React 19 + Tailwind CSS 4
+Auth & DB — Firebase Auth (Google OAuth) + Firestore (real-time onSnapshot)
+AI — Gemini 2.5 Flash (daily) + Gemini 2.5 Pro (weekly) + text-embedding-004
+Calendar — Google Calendar API (bidirectional sync)
+Automation — GitHub Actions (daily cron at 6AM UTC + auto-retry on failure)
+Why This Design Matters
+A normal planner asks "what will you do?" — and you forget by 3PM whether you did it.
+SmartPlanner asks "what did you plan, and what did you actually do?" — and shows the answer next to itself, every day, every week.
+
+That's the whole product: a structured mirror that turns vague intentions into observable patterns, with an AI coach that helps you read the mirror without judgment.
+
+project2: EcoMatch Interiors is a web app utilizing advanced AI technology via the Gemini API to analyze room images and provide personalized, eco-friendly interior design suggestions along with compatibility scores. It converts user text input into embedding vectors using an LLM model to ensure tailored recommendations. The app aims to enhance user satisfaction by offering expert-level insights to improve living spaces while positively impacting the environment.
 The app leverages several key skills including HTML, CSS, and JavaScript for the frontend, and Python and Flask for the backend. Firebase is utilized for its database and function call capabilities, with Gemini serving as the LLM.
 Ecomatch app youtube link: https://www.youtube.com/watch?v=FD6IMrJ3p1A&t=5s
 
-project2: The WallStreetBets Big Board: Top 50 Stocks Application provides insightful and interactive stock analysis focused on the 50 most discussed stocks from Reddit's WallStreetBets community. This application leverages Prophet, Meta's cutting-edge time series forecasting tool, to deliver 10-day stock price predictions. Built with a robust architecture, the app utilizes Docker and Streamlit for its intuitive frontend, while Python and the Prophet model handle all backend processing.
+project3: The WallStreetBets Big Board: Top 50 Stocks Application provides insightful and interactive stock analysis focused on the 50 most discussed stocks from Reddit's WallStreetBets community. This application leverages Prophet, Meta's cutting-edge time series forecasting tool, to deliver 10-day stock price predictions. Built with a robust architecture, the app utilizes Docker and Streamlit for its intuitive frontend, while Python and the Prophet model handle all backend processing.
 WallStreetBets Big Board: Top 50 Stocks Application github link: https://github.com/Alice0914/fun_stock_project
 
-project3: The MBTI-based Data-related Job Recommendation project offers a web-based tool that recommends data-related jobs and provides study guidance tailored to a user's MBTI (Myers-Briggs Type Indicator) personality type. It supports recommendations in both English and Korean. The frontend is built with HTML, CSS, and JavaScript, while Python with Matplotlib and Seaborn handles graph and chart generation. Job recommendations are powered by JSON data generated by a GPT mini model, leveraging advanced Prompt Engineering techniques with MBTI documentation.
+project4: The MBTI-based Data-related Job Recommendation project offers a web-based tool that recommends data-related jobs and provides study guidance tailored to a user's MBTI (Myers-Briggs Type Indicator) personality type. It supports recommendations in both English and Korean. The frontend is built with HTML, CSS, and JavaScript, while Python with Matplotlib and Seaborn handles graph and chart generation. Job recommendations are powered by JSON data generated by a GPT mini model, leveraging advanced Prompt Engineering techniques with MBTI documentation.
 MBTI-based AI & Data-related Job Recommendation APP: https://aicareeradvice.netlify.app/
 
 ####################Review Resume######################
