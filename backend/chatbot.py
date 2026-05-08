@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 from openai import OpenAI, RateLimitError
+import httpx
 import json
 import os
 import re
@@ -7,25 +8,22 @@ from rag import RAGPipeline
 
 load_dotenv(override=True)
 
+_VERIFY_SSL = os.getenv("SSL_VERIFY", "true").lower() != "false"
+
 tools = []
 
 class Me:
     def __init__(self):
         self.gemini = OpenAI(
             api_key=os.getenv("GOOGLE_API_KEY", "DUMMY_KEY"),
-            base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+            base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+            http_client=httpx.Client(verify=_VERIFY_SSL),
         )
         self.model_name = "gemma-4-26b-a4b-it"  # tried: gemma-4-26b-a4b-it (poor instruction following), gemma-4-31b-it
         self.name = "Alice"
 
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         docs_dir = os.path.join(base_dir, "me")
-
-        try:
-            with open(os.path.join(docs_dir, "summary.txt"), "r", encoding="utf-8") as f:
-                self.summary = f.read()
-        except FileNotFoundError:
-            self.summary = "Summary not available"
 
         try:
             self.rag = RAGPipeline(docs_dir)
@@ -72,6 +70,9 @@ You can answer questions about:
 
 When answering AI/data science questions, always use the ## Relevant Background Information section below. Even if the context is a table of contents or partial text, extract what you can and give the most useful answer possible. For example, if the context shows chapter topics, list them and explain what the chapter covers.
 
+## Side Projects Listing Rule
+When the user asks to show, list, or see Alice's side projects (e.g., "show side projects", "what projects has Alice built", "portfolio", "list of side projects"), and the retrieved context contains the "Side Projects: Master List in Priority Order" section, present ALL FIVE projects from that master list in the exact order shown. Never list only some of them, and never reorder them.
+
 ## Page Citation Rules (CRITICAL)
 When the user asks where information appears in a book or document, follow these rules strictly:
 1. The page number for any content MUST come from the [Source: ..., Page N] header that precedes the chunk where that content appears. Never use a different number.
@@ -82,10 +83,8 @@ When the user asks where information appears in a book or document, follow these
 
 Do NOT offer to send messages or collect email addresses. If you truly cannot answer something, simply say you don't have enough information on that specific topic."""
 
-        prompt += f"\n\n## Summary:\n{self.summary}\n\n"
-
         if rag_context:
-            prompt += f"## Relevant Background Information:\n{rag_context}\n\n"
+            prompt += f"\n\n## Relevant Background Information:\n{rag_context}\n\n"
 
         prompt += f"With this context, please chat with the user, always staying in character as {self.name}."
         return prompt

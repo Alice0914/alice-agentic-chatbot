@@ -1,4 +1,5 @@
 import os
+import re
 import time
 import numpy as np
 import pickle
@@ -11,6 +12,7 @@ CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200
 EMBED_MODEL = "models/gemini-embedding-001"
 BATCH_SIZE = 100
+VERIFY_SSL = os.getenv("SSL_VERIFY", "true").lower() != "false"
 
 
 def _split_text(text: str) -> list[str]:
@@ -23,6 +25,32 @@ def _split_text(text: str) -> list[str]:
 
 def _annotate(chunks: list[str], header: str) -> list[str]:
     return [f"{header}\n\n{c}" for c in chunks]
+
+
+def _split_sections(text: str) -> list[tuple[str, str]]:
+    """Split text on lines containing only `---` (3+ dashes).
+    First non-empty line of each section is treated as the section title;
+    remaining lines are the body. Returns list of (title, body) pairs."""
+    raw_sections, current = [[]], 0
+    for line in text.split("\n"):
+        if re.fullmatch(r"-{3,}\s*", line.rstrip()):
+            raw_sections.append([])
+            current += 1
+        else:
+            raw_sections[current].append(line)
+
+    result = []
+    for raw in raw_sections:
+        section = "\n".join(raw).strip()
+        if not section:
+            continue
+        parts = section.split("\n", 1)
+        title = parts[0].strip()
+        body = parts[1].strip() if len(parts) > 1 else ""
+        if not body:
+            body, title = title, ""
+        result.append((title, body))
+    return result
 
 
 def _load_docs(docs_dir: str) -> list[str]:
@@ -42,9 +70,20 @@ def _load_docs(docs_dir: str) -> list[str]:
                 print(f"  Loaded PDF: {filename}", flush=True)
             elif ext == ".txt":
                 with open(filepath, "r", encoding="utf-8") as f:
+                    content = f.read()
+                sections = _split_sections(content)
+                if not sections:
                     header = f"[Source: {filename}]"
-                    texts.extend(_annotate(_split_text(f.read()), header))
-                print(f"  Loaded TXT: {filename}", flush=True)
+                    texts.extend(_annotate(_split_text(content), header))
+                else:
+                    for title, body in sections:
+                        header = (f"[Source: {filename}, Section: {title}]"
+                                  if title else f"[Source: {filename}]")
+                        if len(body) <= CHUNK_SIZE:
+                            texts.append(f"{header}\n\n{body}")
+                        else:
+                            texts.extend(_annotate(_split_text(body), header))
+                print(f"  Loaded TXT: {filename} ({len(sections)} sections)", flush=True)
         except Exception as e:
             print(f"  Skipped {filename}: {e}", flush=True)
     return texts
@@ -60,7 +99,7 @@ def _embed_batch(texts: list[str], api_key: str, max_retries: int = 5) -> list[l
     }
     backoff = 30
     for attempt in range(max_retries):
-        resp = requests.post(url, json=body, timeout=60)
+        resp = requests.post(url, json=body, timeout=60, verify=VERIFY_SSL)
         if resp.status_code == 429:
             print(f"  429 hit, backing off {backoff}s (attempt {attempt + 1}/{max_retries})", flush=True)
             time.sleep(backoff)
@@ -78,7 +117,7 @@ def _embed_query(query: str, api_key: str) -> list[float]:
         "content": {"parts": [{"text": query}]},
         "taskType": "RETRIEVAL_QUERY"
     }
-    resp = requests.post(url, json=body, timeout=30)
+    resp = requests.post(url, json=body, timeout=30, verify=VERIFY_SSL)
     resp.raise_for_status()
     return resp.json()["embedding"]["values"]
 

@@ -1,222 +1,303 @@
-My name is Alice Kim. I'm a curious and inquisitive data scientist who loves exploring new ideas and trying out new things. I grew up in South Korea, spent many years in Silicon Valley, and then moved to Georgia right before COVID hit. On the professional side, I earned my Mathematics degree from San Francisco State University and my Master’s in Analytics from Georgia Tech. I'm currently a Senior Agentic AI Data Scientist at Equifax. My career journey includes roles as a Data Scientist-Project Lead at Southern Gas Company's EDGE Innovation team, a Data Scientist and Analytic Engineer at Cox Communications, a Data Analyst at Coca-Cola, and a Senior Data Specialist at Walmart eCommerce, along with other valuable experiences. I was the winner of a company-hosted hackathon in 2024, where I developed an advanced RAG chatbot leveraging the Gemini API and LangChain framework, demonstrating a 20% improvement in response accuracy. When I'm not working, I love trying new foods, traveling, learning new things, hanging out with friends, and watching movies. 
+About Me: Background and Career
+My name is Alice Kim. I'm a curious and inquisitive data scientist who loves exploring new ideas and trying out new things. I grew up in South Korea, spent many years in Silicon Valley, and then moved to Georgia right before COVID hit. On the professional side, I earned my Mathematics degree from San Francisco State University and my Master's in Analytics from Georgia Tech. I'm currently a Senior Agentic AI Data Scientist at Equifax. My career journey includes roles as a Data Scientist-Project Lead at Southern Gas Company's EDGE Innovation team, a Data Scientist and Analytic Engineer at Cox Communications, a Data Analyst at Coca-Cola, and a Senior Data Specialist at Walmart eCommerce, along with other valuable experiences. I was the winner of a company-hosted hackathon in 2024, where I developed an advanced RAG chatbot leveraging the Gemini API and LangChain framework, demonstrating a 20% improvement in response accuracy. When I'm not working, I love trying new foods, traveling, learning new things, hanging out with friends, and watching movies.
+
+---
+
+About Me: Future Self Philosophy
 I also want to share more about who I am beyond work—what excites me, my hobbies, and what drives me outside of my job. While thinking about how best to express that, a book I read last year came to mind: Future Self by Dr. Benjamin Hardy.
-One of the key ideas in the book is that most people believe their current self is shaped by their past. But in fact, it’s often our vision of who we want to become—what the book calls the 'future self'—that has a greater influence on our present behavior and decisions. "The present self is shaped not by the past, but by the future self."
-That idea really resonated with me. So I started to wonder—what if I introduced myself by talking about who I want to become? But then I realized that defining my future self is not simple. To figure it out, I reflected on what has brought me joy over the years—how I’ve changed, and also what hasn’t changed—especially right before, during, and after COVID. Before covid, I lived in California, I originally came from south korea for school. At that time,  I loved going out with friends to explore new cafes and restaurants, hosting small gatherings and Halloween parties, and playing board games with friends. My husband and I traveled to over 15 countries and over 100 cities. Through those trips, I discovered how much I enjoy learning about different cultures and trying new foods. During COVID, I was surprised by how well I adapted to staying home. I thought I’d miss socializing, but I actually enjoyed the time with my husband at home. We tried new things—board games, puzzles, building our own arcade machine yah, this is for my husband, growing plants, baking, watching movies in our home theater, even building a home gym. At one point, I got curious about NFTs and blockchain. At that time, My brother was attending Berklee College of Music in boston and I asked him to create the music for NFT art, and his artist friend made the digital art. I published an NFT art collection with their work, dreaming that one day I might display these arts in my virtual home in the metaverse. It hasn’t happened yet. but, never say never!
-After COVID, Life became a blend of both worlds. I still enjoy traveling.My husband and I went to hawaii, universal studio in orlando,  and caribbean cruise last year, but I also continue to participate in online communities I joined during the pandemic. I'm now one of volunteer group leaders in two nonprofit communities:
-An online book club with over 600 members, currently supported by Microsoft.
-A K study group with over 1,600 members, backed by a Silicon Valley organization. 
-Through participating in these organizations, I’ve learned a lot and met some amazing people virtually.
-Since the rise of ChatGPT, my interest in AI has grown deeply and Learning new AI technologies and building side projects for fun has become another hobby of mine.
-Thinking through all of this helped me better understand the future self I want to become. And I think these four quotes capture that vision:
- "The best way to predict the future is to create it."
-As a data scientist, I’m really excited to see and experience new technologies, though I sometimes feel uncertain about the fast-changing AI world. But rather than fearing it, I want to actively shape my future by experimenting, building, and learning along the way.
- "When given the choice between being right or being kind, choose kind." – Wonder
-I want to grow into someone with more empathy—someone who listens, understands, and chooses kindness over judgment.
- "When life gives you lemons, make lemonade."
-This is the kind of attitude I want to have in life. Let me share a simple story.
-A few years ago, I went to a restaurant and was surprised to see that the same meal I had before now costs 20% more. At first, I was shocked—but then I thought, “Maybe this is a good chance to eat a little less and lose some weight.”
-I can’t control inflation, but I can choose how I respond to it. I want to be someone who turns unexpected and unpleasant situations into small opportunities.
- "The winner in life isn’t the one who laughs last, but the one who laughs the most along the way."
-I grew up in a culture that emphasized sacrificing the present for a better future. But I now believe that real success lies in creating many meaningful, joyful, and fun memories along the journey of life. I hope my future self is rich in joyful moments—not just having more than I did when I was young, but full of memories truly worth remembering.
+One of the key ideas in the book is that most people believe their current self is shaped by their past. But in fact, it's often our vision of who we want to become—what the book calls the 'future self'—that has a greater influence on our present behavior and decisions. "The present self is shaped not by the past, but by the future self."
+That idea really resonated with me. So I started to wonder—what if I introduced myself by talking about who I want to become? But then I realized that defining my future self is not simple. To figure it out, I reflected on what has brought me joy over the years—how I've changed, and also what hasn't changed—especially right before, during, and after COVID.
+
+---
+
+About Me: Life Before, During, and After COVID
+Before COVID, I lived in California — I originally came from South Korea for school. At that time, I loved going out with friends to explore new cafes and restaurants, hosting small gatherings and Halloween parties, and playing board games with friends. My husband and I traveled to over 15 countries and over 100 cities. Through those trips, I discovered how much I enjoy learning about different cultures and trying new foods.
+During COVID, I was surprised by how well I adapted to staying home. I thought I'd miss socializing, but I actually enjoyed the time with my husband at home. We tried new things — board games, puzzles, building our own arcade machine (yeah, this one was for my husband), growing plants, baking, watching movies in our home theater, even building a home gym. At one point, I got curious about NFTs and blockchain. My brother was attending Berklee College of Music in Boston at the time, and I asked him to create the music for NFT art while his artist friend made the digital art. I published an NFT art collection with their work, dreaming that one day I might display these arts in my virtual home in the metaverse. It hasn't happened yet — but, never say never!
+After COVID, life became a blend of both worlds. I still enjoy traveling — my husband and I went to Hawaii, Universal Studios in Orlando, and a Caribbean cruise last year. I also continue to participate in online communities I joined during the pandemic.
+
+---
+
+About Me: Community Involvement
+I'm now one of the volunteer group leaders in two nonprofit communities:
+- An online book club with over 600 members, currently supported by Microsoft.
+- A K study group with over 1,600 members, backed by a Silicon Valley organization.
+Through participating in these organizations, I've learned a lot and met some amazing people virtually. Since the rise of ChatGPT, my interest in AI has grown deeply, and learning new AI technologies and building side projects for fun has become another hobby of mine.
+
+---
+
+About Me: Life Values and Four Quotes
+Thinking through all of this helped me better understand the future self I want to become. These four quotes capture that vision:
+
+"The best way to predict the future is to create it."
+As a data scientist, I'm really excited to see and experience new technologies, though I sometimes feel uncertain about the fast-changing AI world. But rather than fearing it, I want to actively shape my future by experimenting, building, and learning along the way.
+
+"When given the choice between being right or being kind, choose kind." – Wonder
+I want to grow into someone with more empathy — someone who listens, understands, and chooses kindness over judgment.
+
+"When life gives you lemons, make lemonade."
+This is the kind of attitude I want to have in life. A few years ago, I went to a restaurant and was surprised to see that the same meal I had before now cost 20% more. At first, I was shocked — but then I thought, "Maybe this is a good chance to eat a little less and lose some weight." I can't control inflation, but I can choose how I respond to it. I want to be someone who turns unexpected and unpleasant situations into small opportunities.
+
+"The winner in life isn't the one who laughs last, but the one who laughs the most along the way."
+I grew up in a culture that emphasized sacrificing the present for a better future. But I now believe that real success lies in creating many meaningful, joyful, and fun memories along the journey of life. I hope my future self is rich in joyful moments — not just having more than I did when I was young, but full of memories truly worth remembering.
+
 I like studying.
-I developed an web app showing the AI Career Advice App that is designed to help individuals interested in AI and data-related fields explore suitable careers based on their personality traits. Whether you're uncertain about the types of jobs available, unsure which career suits you best, or don't know where to start your learning journey, this app is here to guide you. The app's key features and functions include:
-If users ask about how to find a right job for them, please explain the app I built below and share its url. 
-https://aicareeradvice.netlify.app/
 
-In order to know their personality via MBTI test, please share the link below.
-https://www.16personalities.com/free-personality-test
+---
 
-If users have some experiences of AI and Data and ask about LLM, Agentic AI, RAG Study Curriculum, please share the link below. This is a Curriculum I created. 
-LLM, Agentic AI, RAC Study Crriculum: https://docs.google.com/document/d/1wf7wgBHRST5Tiv3r1dU_y680Tl2eeUl_9Grtw-fAW1o/edit?usp=sharing
+Study Resource: Find a Right Job Using MBTI (AI Career Advice App)
+If users ask about how to find a right job for them, share the AI Career Advice App below. I built this app to help individuals interested in AI and data-related fields explore suitable careers based on their personality traits. Whether they are uncertain about the types of jobs available, unsure which career suits them best, or don't know where to start their learning journey, this app guides them.
+AI Career Advice App: https://aicareeradvice.netlify.app/
 
-If users does not have any experience in Machine learning and users are a begineer but ask about Machine learning Study Curriculum, please share the link below.
+---
+
+Study Resource: MBTI Personality Test
+If users want to find out their personality via the MBTI test, share the link below.
+Free MBTI Test: https://www.16personalities.com/free-personality-test
+
+---
+
+Study Resource: LLM, Agentic AI, and RAG Curriculum
+If users have some experience with AI and Data and ask about an LLM, Agentic AI, or RAG study curriculum, share the link below. This is a curriculum I created.
+LLM, Agentic AI, RAG Study Curriculum: https://docs.google.com/document/d/1wf7wgBHRST5Tiv3r1dU_y680Tl2eeUl_9Grtw-fAW1o/edit?usp=sharing
+
+---
+
+Study Resource: AI for Everyone (Beginner with No ML Experience)
+If users have no experience in Machine Learning and are beginners but ask about a Machine Learning study curriculum, share the link below.
 AI for Everyone: https://www.deeplearning.ai/courses/ai-for-everyone/
 
-If users does not have any experience in Machine learning but would like to learn Machine learning and ask Machine learning Study Curriculum, please share the link below.
+---
+
+Study Resource: Machine Learning Specialization (No ML Experience but Want to Learn)
+If users have no experience in Machine Learning but would like to learn Machine Learning and ask about a Machine Learning study curriculum, share the link below.
 Machine Learning Specialization: https://www.deeplearning.ai/courses/machine-learning-specialization/
-If users have some experience in Machine learning and would like to learn more about Machine learning and ask Machine learning Study Curriculum, please share the link below.
+
+---
+
+Study Resource: Machine Learning in Production (Some ML Experience)
+If users have some experience in Machine Learning and want to learn more about Machine Learning and ask about a Machine Learning study curriculum, share the link below.
 Machine Learning in Production: https://www.deeplearning.ai/courses/machine-learning-in-production/
 
-If users ask about how to learn Deep learning, Neural Network, LLM, CNN, please share the link below. This is a Curriculum I created. 
-Deep Learning Study Crriculum : https://docs.google.com/document/d/1ylmFNJ2svLrMxaGo-APOmgtN0R-CCzDzSx4j0UdaN5A/edit?usp=sharing
+---
 
-If users ask about portfolio strategies or how to prepare for a career transition, please share the link below and advise them that it is often more beneficial to build one end-to-end, complicated application or project rather than developing multiple simple ones.
+Study Resource: Deep Learning, Neural Network, LLM, CNN Curriculum
+If users ask about how to learn Deep Learning, Neural Networks, LLMs, or CNNs, share the link below. This is a curriculum I created.
+Deep Learning Study Curriculum: https://docs.google.com/document/d/1ylmFNJ2svLrMxaGo-APOmgtN0R-CCzDzSx4j0UdaN5A/edit?usp=sharing
 
-project 0:AI Trend 1-Minute
-App explanation: AI Trend 1-Minute is a bilingual (English/Korean) web app that lets you catch the day's most important AI news in about a minute and share it to social media instantly. It auto-collects from nine sources — Anthropic, OpenAI, xAI, NVIDIA, MIT, TechCrunch and others — then runs a four-stage deduplication pipeline (embedding → LLM extraction → logical verification → cross-encoder) to keep only one article per story. A tournament-style scoring loop using Gemini 2.5 Pro and Grok 4.1 assigns each article a 0–100 impact score, so the must-read stories surface at the top of the feed, while top articles are auto-tagged, summarized, translated into Korean, and uploaded to Firestore. The React frontend lets users quickly filter by category, service, or core element and bookmark what they like. One-click sharing to Threads, X, LinkedIn, Reddit, and WhatsApp turns reading into sharing in seconds — from headline to post in under a minute.
+---
 
-— End-to-End Process
+Study Resource: Portfolio Strategy and Career Transition Advice
+If users ask about portfolio strategies or how to prepare for a career transition, advise them that it is often more beneficial to build one end-to-end, complicated application or project rather than developing multiple simple ones.
+
+---
+
+Side Projects: Master List in Priority Order
+Alice has built five side projects. When the user asks to show, list, or see her side projects (questions like "show Alice's side projects", "what side projects has Alice built", "list of projects", "portfolio"), present ALL FIVE projects in this exact priority order. Do not skip any project. Do not reorder.
+
+1. AI Trend 1-Minute — Bilingual (English/Korean) AI news curation web app. Auto-collects from nine sources, runs a 4-stage deduplication pipeline, and uses tournament-style scoring with Gemini 2.5 Pro and Grok 4.1 to surface the day's most important AI news in under a minute. Link: https://ai-news-trend.vercel.app/
+2. SmartPlanner — AI-powered daily planner built around metacognition. Each time slot has both a Planned and Actual field side-by-side; Gemini analyzes the gap and provides daily/weekly coaching. Two-way Google Calendar sync. Link: https://smart-planner4u.vercel.app/
+3. EcoMatch Interiors — Web app using the Gemini API to analyze room images and provide personalized, eco-friendly interior design suggestions with compatibility scores. YouTube demo: https://www.youtube.com/watch?v=FD6IMrJ3p1A&t=5s
+4. WallStreetBets Big Board (Top 50 Stocks) — Interactive stock analysis app focused on the 50 most discussed stocks on Reddit's WallStreetBets, using Meta's Prophet model for 10-day price predictions. GitHub: https://github.com/Alice0914/fun_stock_project
+5. MBTI-based Data-related Job Recommendation — Web tool that recommends data-related jobs and study guidance tailored to a user's MBTI personality type. Bilingual (English/Korean). Link: https://aicareeradvice.netlify.app/
+
+For full details on any specific project, refer to its dedicated "Side Project: ..." section.
+
+---
+
+Side Project: AI Trend 1-Minute — Overview
+AI Trend 1-Minute is a bilingual (English/Korean) web app that lets you catch the day's most important AI news in about a minute and share it to social media instantly. It auto-collects from nine sources — Anthropic, OpenAI, xAI, NVIDIA, MIT, TechCrunch and others — then runs a four-stage deduplication pipeline (embedding → LLM extraction → logical verification → cross-encoder) to keep only one article per story. A tournament-style scoring loop using Gemini 2.5 Pro and Grok 4.1 assigns each article a 0–100 impact score, so the must-read stories surface at the top of the feed, while top articles are auto-tagged, summarized, translated into Korean, and uploaded to Firestore. The React frontend lets users quickly filter by category, service, or core element and bookmark what they like. One-click sharing to Threads, X, LinkedIn, Reddit, and WhatsApp turns reading into sharing in seconds — from headline to post in under a minute.
+App link: https://ai-news-trend.vercel.app/
+TL;DR: Collect from nine sources → 4-stage dedup → tournament scoring + tagging → Korean translation → Firestore upload → React feed with filtering and sharing.
+
+---
+
+Side Project: AI Trend 1-Minute — End-to-End Pipeline: Step 1 — Parallel Collection
 A bilingual (English/Korean) AI news curation app. A Python pipeline runs on a daily schedule to collect, deduplicate, score, tag, translate, and upload AI news to Firestore. A React frontend then serves that data as a personalized, one-minute readable feed.
 
 Step 1 — Parallel Collection
-The system collects AI news concurrently from multiple sources including AI labs, tech journalism websites, and AI news aggregators.
-All collected articles are normalized into a unified structure containing the title, content, source, URL, and publication date for downstream processing.
-The pipeline also performs content cleaning, metadata extraction, duplicate detection, and source prioritization. To improve reliability, each source is assigned an authority score, which is later used to resolve overlapping or duplicated news articles across different platforms.
-This helps create a cleaner and more trustworthy dataset for AI summarization, ranking, and recommendation workflows.
+The system collects AI news concurrently from multiple sources including AI labs, tech journalism websites, and AI news aggregators. All collected articles are normalized into a unified structure containing the title, content, source, URL, and publication date for downstream processing. The pipeline also performs content cleaning, metadata extraction, duplicate detection, and source prioritization. To improve reliability, each source is assigned an authority score, which is later used to resolve overlapping or duplicated news articles across different platforms. This helps create a cleaner and more trustworthy dataset for AI summarization, ranking, and recommendation workflows.
+
+---
+
+Side Project: AI Trend 1-Minute — End-to-End Pipeline: Step 2 — Four-Stage Deduplication
 
 Step 2 — Four-Stage Deduplication
 Because the same announcement is usually covered by multiple sources, the pipeline runs a four-stage dedup that balances recall (catching every duplicate) with precision (not collapsing unrelated stories that happen to share keywords). Stage 1 is a cheap fan-out: gemini-embedding-2-preview produces 768-dim title embeddings and any pair with cosine similarity above 0.92 becomes a candidate. Stage 2 sends the candidate pair's full content to gemini-2.5-flash, which extracts a structured record of {entities, event_type, product_name, date}. Stage 3 then applies a rule-based check that requires at least two of those four fields to match — this is what filters out look-alike but unrelated stories. Stage 4 confirms the survivors with a cross-encoder/stsb-roberta-large reranker, requiring a final score above 0.90. When a duplicate is confirmed, the article from the higher-priority source is kept and its exposure_score is incremented by one for each duplicate dropped — a signal that the whole industry is talking about this story.
 
+---
+
+Side Project: AI Trend 1-Minute — End-to-End Pipeline: Step 3 — Tournament Scoring and Tagging
+
 Step 3 — Tournament Scoring and Tagging
 Surviving articles are then run through a tournament-style scoring process that escalates compute only for promising candidates. Round 1 always runs gemini-2.5-pro for an initial 1–5 rating with reasoning. If that score is at least 3.0, Round 2 fetches an independent second opinion from xAI's grok-4-1-fast-reasoning. If the average of Rounds 1 and 2 is at least 4.0, Round 3 does a final verification pass with gemini-2.5-pro to confirm top-tier candidates. The mean star rating is multiplied by 20 to land on a 0–100 scale, then exposure_score * 2 is added as a bonus and the result is capped at 100. After scoring, articles are sorted by impactScore and passed to a gemini-2.5-flash tagging step that produces a clean title, a 2–3 sentence summary, three to five search keywords, and strict-allowlist tags for categories, productServices, and coreElements. To control cost, a why_it_matters blurb is generated only for the top 20 articles.
+
+---
+
+Side Project: AI Trend 1-Minute — End-to-End Pipeline: Step 4 — Korean Translation and Final JSON
 
 Step 4 — Korean Translation and Final JSON
 The translator stage runs in backend/agents/processors/translator.py and combines two strategies. LLM translation via gemini-2.5-flash handles the free-text fields — title, summary, why_it_matters (when present), and searchKeywords — producing their *_ko counterparts with a prompt that keeps widely-used technical terms like "AI", "LLM", and "GPT" in English. The classification tags use deterministic map-based translation instead, looking up categories_ko, productServices_ko, and coreElements_ko directly from CATEGORY_MAP, SERVICE_MAP, and CORE_MAP in config.py — no LLM call needed, so the result is consistent across runs. A URL-safe id is generated by slugifying the title and appending the date, and publishedDate is normalized to YYYY-MM-DD. The full per-day output is saved to backend/data/final_data/final_news_output_<YYYYMMDD>.json.
 
+---
+
+Side Project: AI Trend 1-Minute — End-to-End Pipeline: Step 5 — Firestore Upload
+
 Step 5 — Firestore Upload
 The uploader appends each finalized article to the news_feeds/{YYYY-MM} document, storing the day's articles inside a news array field. The pipeline is meant to run on a smart schedule: on Mondays it pulls Saturday and Sunday together, on Tuesday through Saturday it pulls yesterday only, and on Sundays it doesn't run at all.
+
+---
+
+Side Project: AI Trend 1-Minute — End-to-End Pipeline: Step 6 — Frontend Delivery
 
 Step 6 — Frontend Delivery
 The React app in src/pages/UserApp.jsx handles everything user-facing. Users sign in through Firebase Auth (Google, email, Twitter, or LinkedIn), then go through an onboarding flow where they select their preferred categories, services, and core elements. The feed view queries news_feeds/{YYYY-MM}, filters by date and the user's interests, and renders cards in impactScore order. i18next picks either the English fields or the *_ko fields depending on the user's language, so the same Firestore document drives both locales without a separate fetch. From there users can filter further, bookmark, like, and one-click share to Threads, X, LinkedIn, Reddit, or WhatsApp — the whole flow designed to surface the day's important AI news in about a minute.
 
-TL;DR: Collect from nine sources → 4-stage dedup → tournament scoring + tagging → Korean translation → Firestore upload → React feed with filtering and sharing.
-app link: https://ai-news-trend.vercel.app/
+---
 
-project 1: SmartPlanner — App Overview
-What it is
+Side Project: SmartPlanner — Overview
 SmartPlanner is an AI-powered daily planner built around metacognition. Most planners only let you write down what you intend to do. SmartPlanner is different: every 15/30/60-minute slot has both a Planned field and an Actual field, side by side. You see in one glance the gap between what you said you would do and what you actually did — and that gap is where self-awareness grows.
-
 This "plan vs. actual" pairing is the foundation of the entire app. The AI coaching, weekly habit tracker, and efficiency metrics are all just structured reflections on that gap, designed to help you build accurate self-knowledge instead of vague guilt.
+SmartPlanner link: https://smart-planner4u.vercel.app/
 
+---
+
+Side Project: SmartPlanner — Metacognition Loop
 The Core Idea: Metacognition Loop
-
 PLAN  →  DO  →  SEE THE GAP  →  AI REFLECTS WITH YOU  →  ADJUST  →  REPEAT
-Plan — block out your day in 30-min slots (morning, what you intend)
-Do — fill in the "actual" field as the day unfolds (or at end of day)
-See the gap — planned vs actual sit next to each other; you can't avoid noticing what slipped
-AI reflects — Gemini analyzes the gap and writes you a 3-4 sentence coaching message the next morning
-Adjust — the gap, named and explained, becomes data instead of shame
+- Plan — block out your day in 30-min slots (morning, what you intend)
+- Do — fill in the "actual" field as the day unfolds (or at end of day)
+- See the gap — planned vs actual sit next to each other; you can't avoid noticing what slipped
+- AI reflects — Gemini analyzes the gap and writes you a 3-4 sentence coaching message the next morning
+- Adjust — the gap, named and explained, becomes data instead of shame
 This loop is what builds 메타인지 (metacognition) — knowing what you actually do, not what you imagine you do.
 
-Core Features
-Side-by-side Planned vs Actual schedule — the metacognitive heart of the app; visible mismatch every day
-Two-way Google Calendar sync — edits in the planner push to GCal; GCal events pull back in
-AI habit detection — Gemini decides which tasks are routines (Stretching, Reading) vs goals (Work, Project X)
-Weekly Habits Tracker — surfaces tasks you've repeated 3+ days that the AI flagged as habits
-Efficiency Metrics — planned vs. actual completion per category, switchable between task counts and hours (this is the gap, quantified)
-Time Distribution donut — visualizes your week across Productive / Maintenance / Recovery domains
-AI coaching feedback — daily morning message + weekly Sunday review, written like a behavioral science coach
-The Full Pipeline
+---
 
-┌─────────────────────────────────────────────────────────────┐
-│ 1. USER INPUT (the metacognition loop)                      │
-│   Morning  → fill PLANNED slots (intent)                    │
-│   Day      → fill ACTUAL slots (reality)                    │
-│   Side-by-side display = visible self-awareness             │
-│   Stored in: users/{uid}/schedules/{date}.slots             │
-└─────────────────────────────────────────────────────────────┘
-                          │
-                          ▼ (debounced 2s)
-┌─────────────────────────────────────────────────────────────┐
-│ 2. GOOGLE CALENDAR SYNC (real-time)                         │
-│   • Merge consecutive same-task slots into one GCal event   │
-│   • PATCH existing / POST new / DELETE removed events       │
-└─────────────────────────────────────────────────────────────┘
-                          │
-                          ▼ (every morning, GitHub Actions cron)
-┌─────────────────────────────────────────────────────────────┐
-│ 3. DAILY AI ANALYSIS — analyze_habits.mjs                   │
-│   Reads PLANNED + ACTUAL together → quantifies the gap      │
-│                                                              │
-│   Track 1: text-embedding-004 → category classification     │
-│   Track 2: gemini-2.5-flash → structured JSON:              │
-│      • tasks[] with is_habit (routine vs goal)              │
-│      • categories (planned vs actual minutes per category)  │
-│      • gemini_feedback (coaches you on the gap)             │
-│                                                              │
-│   Saved to: users/{uid}/daily_analysis/{date}               │
-└─────────────────────────────────────────────────────────────┘
-                          │
-                          ▼ (Sundays only)
-┌─────────────────────────────────────────────────────────────┐
-│ 4. WEEKLY AI ANALYSIS — gemini-2.5-pro                      │
-│   Aggregate 7 days → "Where did intent and reality diverge  │
-│   most?" → last_week_review + advice_for_this_week[]        │
-└─────────────────────────────────────────────────────────────┘
-                          │
-                          ▼ (real-time onSnapshot)
-┌─────────────────────────────────────────────────────────────┐
-│ 5. FRONTEND (Next.js, page.tsx)                             │
-│   • Daily tab: planned/actual side-by-side                  │
-│   • Weekly Habits Tracker: what you actually built          │
-│   • Efficiency Metrics: planned vs actual, quantified gap   │
-│   • Time Distribution donut: where time really went         │
-└─────────────────────────────────────────────────────────────┘
-How is_habit Decides
+Side Project: SmartPlanner — Core Features
+- Side-by-side Planned vs Actual schedule — the metacognitive heart of the app; visible mismatch every day.
+- Two-way Google Calendar sync — edits in the planner push to GCal; GCal events pull back in.
+- AI habit detection — Gemini decides which tasks are routines (Stretching, Reading) vs goals (Work, Project X).
+- Weekly Habits Tracker — surfaces tasks you've repeated 3+ days that the AI flagged as habits.
+- Efficiency Metrics — planned vs. actual completion per category, switchable between task counts and hours (this is the gap, quantified).
+- Time Distribution donut — visualizes your week across Productive / Maintenance / Recovery domains.
+- AI coaching feedback — daily morning message + weekly Sunday review, written like a behavioral science coach.
+
+---
+
+Side Project: SmartPlanner — Full Pipeline
+1. USER INPUT (the metacognition loop): Morning → fill PLANNED slots (intent). Day → fill ACTUAL slots (reality). Side-by-side display = visible self-awareness. Stored in users/{uid}/schedules/{date}.slots.
+2. GOOGLE CALENDAR SYNC (real-time, debounced 2s): Merge consecutive same-task slots into one GCal event. PATCH existing / POST new / DELETE removed events.
+3. DAILY AI ANALYSIS (every morning, GitHub Actions cron) — analyze_habits.mjs: Reads PLANNED + ACTUAL together → quantifies the gap. Track 1: text-embedding-004 → category classification. Track 2: gemini-2.5-flash → structured JSON with tasks[] (is_habit: routine vs goal), categories (planned vs actual minutes per category), and gemini_feedback (coaches you on the gap). Saved to users/{uid}/daily_analysis/{date}.
+4. WEEKLY AI ANALYSIS (Sundays only) — gemini-2.5-pro: Aggregate 7 days → "Where did intent and reality diverge most?" → last_week_review + advice_for_this_week[].
+5. FRONTEND (Next.js, page.tsx, real-time onSnapshot): Daily tab with planned/actual side-by-side. Weekly Habits Tracker showing what you actually built. Efficiency Metrics for planned vs actual quantified gap. Time Distribution donut for where time really went.
+
+---
+
+Side Project: SmartPlanner — Habit Detection Logic
 The AI is asked: "Is this building a routine, or completing a goal?"
+- is_habit: true (routine) — Stretching, Meditation, Reading, Coding Practice, English Practice, Morning Routine, Night Plan, Journaling.
+- is_habit: false (goal/necessity) — Work, Coding, Meeting, Email, "Gemini 4 Hackathon", "Planner App", Dinner, Commute, Sleep, Getting Ready.
 
-is_habit: true (routine)	is_habit: false (goal/necessity)
-Stretching, Meditation, Reading	Work, Coding, Meeting, Email
-Coding Practice, English Practice	"Gemini 4 Hackathon", "Planner App"
-Morning Routine, Night Plan, Journaling	Dinner, Commute, Sleep, Getting Ready
+---
+
+Side Project: SmartPlanner — Tech Stack and Why It Matters
 Tech Stack
-Frontend — Next.js 16 (App Router) + React 19 + Tailwind CSS 4
-Auth & DB — Firebase Auth (Google OAuth) + Firestore (real-time onSnapshot)
-AI — Gemini 2.5 Flash (daily) + Gemini 2.5 Pro (weekly) + text-embedding-004
-Calendar — Google Calendar API (bidirectional sync)
-Automation — GitHub Actions (daily cron at 6AM UTC + auto-retry on failure)
+- Frontend — Next.js 16 (App Router) + React 19 + Tailwind CSS 4
+- Auth & DB — Firebase Auth (Google OAuth) + Firestore (real-time onSnapshot)
+- AI — Gemini 2.5 Flash (daily) + Gemini 2.5 Pro (weekly) + text-embedding-004
+- Calendar — Google Calendar API (bidirectional sync)
+- Automation — GitHub Actions (daily cron at 6AM UTC + auto-retry on failure)
+
 Why This Design Matters
-A normal planner asks "what will you do?" — and you forget by 3PM whether you did it.
-SmartPlanner asks "what did you plan, and what did you actually do?" — and shows the answer next to itself, every day, every week.
+A normal planner asks "what will you do?" — and you forget by 3PM whether you did it. SmartPlanner asks "what did you plan, and what did you actually do?" — and shows the answer next to itself, every day, every week. That's the whole product: a structured mirror that turns vague intentions into observable patterns, with an AI coach that helps you read the mirror without judgment.
 
-That's the whole product: a structured mirror that turns vague intentions into observable patterns, with an AI coach that helps you read the mirror without judgment.
+---
 
-smartplanner link: https://smart-planner4u.vercel.app/
-
-project2: EcoMatch Interiors is a web app utilizing advanced AI technology via the Gemini API to analyze room images and provide personalized, eco-friendly interior design suggestions along with compatibility scores. It converts user text input into embedding vectors using an LLM model to ensure tailored recommendations. The app aims to enhance user satisfaction by offering expert-level insights to improve living spaces while positively impacting the environment.
+Side Project: EcoMatch Interiors
+EcoMatch Interiors is a web app utilizing advanced AI technology via the Gemini API to analyze room images and provide personalized, eco-friendly interior design suggestions along with compatibility scores. It converts user text input into embedding vectors using an LLM model to ensure tailored recommendations. The app aims to enhance user satisfaction by offering expert-level insights to improve living spaces while positively impacting the environment.
 The app leverages several key skills including HTML, CSS, and JavaScript for the frontend, and Python and Flask for the backend. Firebase is utilized for its database and function call capabilities, with Gemini serving as the LLM.
-Ecomatch app youtube link: https://www.youtube.com/watch?v=FD6IMrJ3p1A&t=5s
+EcoMatch app YouTube link: https://www.youtube.com/watch?v=FD6IMrJ3p1A&t=5s
 
-project3: The WallStreetBets Big Board: Top 50 Stocks Application provides insightful and interactive stock analysis focused on the 50 most discussed stocks from Reddit's WallStreetBets community. This application leverages Prophet, Meta's cutting-edge time series forecasting tool, to deliver 10-day stock price predictions. Built with a robust architecture, the app utilizes Docker and Streamlit for its intuitive frontend, while Python and the Prophet model handle all backend processing.
-WallStreetBets Big Board: Top 50 Stocks Application github link: https://github.com/Alice0914/fun_stock_project
+---
 
-project4: The MBTI-based Data-related Job Recommendation project offers a web-based tool that recommends data-related jobs and provides study guidance tailored to a user's MBTI (Myers-Briggs Type Indicator) personality type. It supports recommendations in both English and Korean. The frontend is built with HTML, CSS, and JavaScript, while Python with Matplotlib and Seaborn handles graph and chart generation. Job recommendations are powered by JSON data generated by a GPT mini model, leveraging advanced Prompt Engineering techniques with MBTI documentation.
-MBTI-based AI & Data-related Job Recommendation APP: https://aicareeradvice.netlify.app/
+Side Project: WallStreetBets Big Board (Top 50 Stocks)
+The WallStreetBets Big Board: Top 50 Stocks Application provides insightful and interactive stock analysis focused on the 50 most discussed stocks from Reddit's WallStreetBets community. This application leverages Prophet, Meta's cutting-edge time series forecasting tool, to deliver 10-day stock price predictions. Built with a robust architecture, the app utilizes Docker and Streamlit for its intuitive frontend, while Python and the Prophet model handle all backend processing.
+WallStreetBets Big Board GitHub: https://github.com/Alice0914/fun_stock_project
 
-####################Review Resume######################
-When crafting or evaluating an AI/Data Science résumé, it is essential to organize your content around four foundational pillars—Technical Competencies, Job Fit, Project Quality, and Emerging Trends—while also tailoring every detail to the specific work scope and skill requirements of the target role.
+---
 
-First, your résumé must clearly demonstrate core technical competencies. Begin by distinguishing between your proficiency in using existing tools and frameworks and your ability to develop reusable solutions of your own. For example, instead of simply stating “Python expertise,” describe how you designed and published three internal data-processing Python packages, and contrast that with leveraging pandas and PySpark for large-scale ETL tasks. In the SQL section, highlight advanced techniques—window functions, complex joins, or execution-plan optimizations—and quantify your impact, such as “reduced query runtime by 60% through index tuning.” Modern technology stacks deserve similar treatment: explain why you chose to learn a new tool—be it an LLM framework, an AutoML platform, or an MLOps pipeline—and how you applied it in a real project, emphasizing both your motivation and outcomes. Close this pillar by detailing your data-processing workflow—from exploratory data analysis and feature engineering to outlier detection and missing-value strategies—and linking these steps to concrete business insights. Finally, illustrate your statistical and machine-learning expertise with specifics: describe hypothesis tests, model-training processes, hyperparameter tuning, and ensemble methods, and show “before and after” improvements (for instance, “improved classification accuracy from 85% to 91%”).
+Side Project: MBTI-based Data-related Job Recommendation
+The MBTI-based Data-related Job Recommendation project offers a web-based tool that recommends data-related jobs and provides study guidance tailored to a user's MBTI (Myers-Briggs Type Indicator) personality type. It supports recommendations in both English and Korean. The frontend is built with HTML, CSS, and JavaScript, while Python with Matplotlib and Seaborn handles graph and chart generation. Job recommendations are powered by JSON data generated by a GPT mini model, leveraging advanced Prompt Engineering techniques with MBTI documentation.
+MBTI-based AI & Data-related Job Recommendation App: https://aicareeradvice.netlify.app/
 
-Second, strong candidates align their backgrounds with the job fit criteria of the role they’re pursuing. Recruiters will look for domain expertise that matches their team’s focus: if time-series forecasting is central, lead with your forecasting projects and their performance metrics (e.g., “achieved a weekly forecast error below 5%”). Demonstrate industry and business acumen by describing how you solved real-world problems in finance, healthcare, manufacturing, or whichever sector applies, and articulate what you learned about its data challenges. Most importantly, quantify your contributions in terms of ROI or key performance indicators: “recommended process changes that increased production by 15%, generating $1 million in incremental revenue.”
+---
 
-The third pillar, project quality, highlights your problem-solving approach and end-to-end ownership. Avoid generic tutorials or toy datasets; instead, document the full decision-making lifecycle—defining the problem, selecting and justifying methods, and interpreting results. Showcase your experience deploying models into production: discuss containerization (Docker/Kubernetes), CI/CD integrations, monitoring strategies, and use of collaboration tools such as Git, issue trackers, or Agile workflows. Demonstrating that you can carry a project from data ingestion through deployment and ongoing maintenance is a powerful differentiator.
+Career Advice: Resume Four Pillars Overview
+When crafting or evaluating an AI/Data Science résumé, it is essential to organize your content around four foundational pillars — Technical Competencies, Job Fit, Project Quality, and Emerging Trends — while also tailoring every detail to the specific work scope and skill requirements of the target role.
 
-Fourth, reflecting 2025’s AI and data trends signals that you’re at the forefront of the field. Describe your work with generative AI or autonomous (“agentic”) pipelines, including prompt engineering or LLM orchestration. Outline any ethical-AI or governance frameworks you’ve implemented to ensure fairness and transparency. Detail your MLOps and infrastructure experience on cloud platforms—AWS, GCP, or Azure—including model versioning, autoscaling, and uptime metrics (e.g., “maintained 99.9% model availability”). If you have used AutoML or explainable-AI tools, briefly note the effect on development velocity or stakeholder trust.
+---
 
-Throughout your résumé, avoid red flags—vague achievements, mere lists of technologies, or projects lacking clear business impact—and instead cultivate green flags: measurable KPIs, deep role alignment, and evidence of continuous learning (certifications, conference talks, open-source contributions). For entry-level candidates, emphasize personal projects, course certificates, and the “I’ve prepared diligently” narrative; for experienced professionals, lead with leadership examples, cross-functional impact, and high-value business results.
+Career Advice: Resume Pillar 1 — Technical Competencies
+Your résumé must clearly demonstrate core technical competencies. Begin by distinguishing between your proficiency in using existing tools and frameworks and your ability to develop reusable solutions of your own. For example, instead of simply stating "Python expertise," describe how you designed and published three internal data-processing Python packages, and contrast that with leveraging pandas and PySpark for large-scale ETL tasks. In the SQL section, highlight advanced techniques — window functions, complex joins, or execution-plan optimizations — and quantify your impact, such as "reduced query runtime by 60% through index tuning." Modern technology stacks deserve similar treatment: explain why you chose to learn a new tool — be it an LLM framework, an AutoML platform, or an MLOps pipeline — and how you applied it in a real project, emphasizing both your motivation and outcomes. Close this pillar by detailing your data-processing workflow — from exploratory data analysis and feature engineering to outlier detection and missing-value strategies — and linking these steps to concrete business insights. Finally, illustrate your statistical and machine-learning expertise with specifics: describe hypothesis tests, model-training processes, hyperparameter tuning, and ensemble methods, and show "before and after" improvements (for instance, "improved classification accuracy from 85% to 91%").
 
-Finally, even roles sharing the same title can differ significantly in work scope and required skills. Before submission, extract key terms from the job description—whether real-time streaming versus batch analytics or PySpark versus TensorFlow—and reorder your résumé so that projects explicitly showcasing those skills appear first. Less directly relevant experiences can follow in supporting sections. By weaving these four pillars into a cohesive narrative and tailoring your résumé to each opportunity’s unique demands, you will present a compelling, targeted case for why you are the ideal candidate.
+---
 
+Career Advice: Resume Pillar 2 — Job Fit
+Strong candidates align their backgrounds with the job fit criteria of the role they're pursuing. Recruiters will look for domain expertise that matches their team's focus: if time-series forecasting is central, lead with your forecasting projects and their performance metrics (e.g., "achieved a weekly forecast error below 5%"). Demonstrate industry and business acumen by describing how you solved real-world problems in finance, healthcare, manufacturing, or whichever sector applies, and articulate what you learned about its data challenges. Most importantly, quantify your contributions in terms of ROI or key performance indicators: "recommended process changes that increased production by 15%, generating $1 million in incremental revenue."
+
+---
+
+Career Advice: Resume Pillar 3 — Project Quality
+The third pillar, project quality, highlights your problem-solving approach and end-to-end ownership. Avoid generic tutorials or toy datasets; instead, document the full decision-making lifecycle — defining the problem, selecting and justifying methods, and interpreting results. Showcase your experience deploying models into production: discuss containerization (Docker/Kubernetes), CI/CD integrations, monitoring strategies, and use of collaboration tools such as Git, issue trackers, or Agile workflows. Demonstrating that you can carry a project from data ingestion through deployment and ongoing maintenance is a powerful differentiator.
+
+---
+
+Career Advice: Resume Pillar 4 — Emerging Trends
+Reflecting 2025's AI and data trends signals that you're at the forefront of the field. Describe your work with generative AI or autonomous ("agentic") pipelines, including prompt engineering or LLM orchestration. Outline any ethical-AI or governance frameworks you've implemented to ensure fairness and transparency. Detail your MLOps and infrastructure experience on cloud platforms — AWS, GCP, or Azure — including model versioning, autoscaling, and uptime metrics (e.g., "maintained 99.9% model availability"). If you have used AutoML or explainable-AI tools, briefly note the effect on development velocity or stakeholder trust.
+
+---
+
+Career Advice: Resume Red Flags vs Green Flags
+Throughout your résumé, avoid red flags — vague achievements, mere lists of technologies, or projects lacking clear business impact — and instead cultivate green flags: measurable KPIs, deep role alignment, and evidence of continuous learning (certifications, conference talks, open-source contributions). For entry-level candidates, emphasize personal projects, course certificates, and the "I've prepared diligently" narrative; for experienced professionals, lead with leadership examples, cross-functional impact, and high-value business results.
+
+---
+
+Career Advice: Tailoring a Resume to a Job Description
+Even roles sharing the same title can differ significantly in work scope and required skills. Before submission, extract key terms from the job description — whether real-time streaming versus batch analytics or PySpark versus TensorFlow — and reorder your résumé so that projects explicitly showcasing those skills appear first. Less directly relevant experiences can follow in supporting sections. By weaving these four pillars into a cohesive narrative and tailoring your résumé to each opportunity's unique demands, you will present a compelling, targeted case for why you are the ideal candidate.
 If you receive similar questions about career advice, skill development, project experience, or technology learning methods, answer in the same structure as above — a concise and direct main answer, followed by specific examples, and then optional follow-up prompts for project showcase if relevant.
 
-Example 1: 
+---
+
+Q&A: How Alice Stays Up-to-Date with Emerging Technologies
 Q: How do you stay up-to-date with emerging technologies in data science?
-A: I actively follow AI and data-related trends by reading AI news, research papers, and blogs, exploring new tools, and experimenting with side projects. For example, after the rise of ChatGPT, I began building fun AI prototypes, and when RAG systems became popular, I developed an advanced RAG chatbot using LangChain and LangGraph. I’ve also participated in hackathons and competitions, such as creating an end-to-end AI-powered interior design app using the Gemini API, LangChain, and Firebase. In addition, I take part in online communities and study groups, where I exchange ideas and learn from peers. Staying hands-on is key — I don’t just read about new technologies, I test them and explore how they can be applied to real-world scenarios.
+A: I actively follow AI and data-related trends by reading AI news, research papers, and blogs, exploring new tools, and experimenting with side projects. For example, after the rise of ChatGPT, I began building fun AI prototypes, and when RAG systems became popular, I developed an advanced RAG chatbot using LangChain and LangGraph. I've also participated in hackathons and competitions, such as creating an end-to-end AI-powered interior design app using the Gemini API, LangChain, and Firebase. In addition, I take part in online communities and study groups, where I exchange ideas and learn from peers. Staying hands-on is key — I don't just read about new technologies, I test them and explore how they can be applied to real-world scenarios.
 
-If you’d like to see examples of my side projects, ask: “Show Alice’s side projects.”
-If you are a beginner, ask: “How to study to become a data scientist as a beginner?”
-If you’d like to know how I studied deep learning, ask: “What is your curriculum for studying deep learning?”
-If you’d like to know how I studied Agentic AI, RAG, and LLM, ask: “What is your curriculum for studying Agentic AI, RAG, and LLM?”
+Follow-up prompts:
+- If you'd like to see examples of my side projects, ask: "Show Alice's side projects."
+- If you are a beginner, ask: "How to study to become a data scientist as a beginner?"
+- If you'd like to know how I studied deep learning, ask: "What is your curriculum for studying deep learning?"
+- If you'd like to know how I studied Agentic AI, RAG, and LLM, ask: "What is your curriculum for studying Agentic AI, RAG, and LLM?"
 
-Example 2:
+---
+
+Q&A: Transitioning from Data Analyst to Data Scientist
 Q: What tips would you give to someone moving from a data analysis role to a data scientist role?
-A:Focus on bridging the gap between descriptive analytics and predictive or prescriptive analytics. In your résumé and portfolio, highlight not just the tools you use but how you’ve applied them end-to-end — from data ingestion and cleaning to modeling, evaluating, optimizing, and deployment. Build one or two high-quality projects that demonstrate your ability to solve real business problems. I recommend creating a complete application rather than multiple small demos, because it better showcases your ability to handle complexity.
+A: Focus on bridging the gap between descriptive analytics and predictive or prescriptive analytics. In your résumé and portfolio, highlight not just the tools you use but how you've applied them end-to-end — from data ingestion and cleaning to modeling, evaluating, optimizing, and deployment. Build one or two high-quality projects that demonstrate your ability to solve real business problems. I recommend creating a complete application rather than multiple small demos, because it better showcases your ability to handle complexity.
 
-If you’d like to see examples of my side projects, ask: “Show Alice’s side projects.”
+Follow-up prompts:
+- If you'd like to see examples of my side projects, ask: "Show Alice's side projects."
 
-Example 3: 
+---
+
+Q&A: How to Write a Data Scientist Résumé
 Q: How to write a résumé for a data scientist?
-
 A: I recommend highlighting two things above all else:
 - Achievements in competitions or hackathons — such as winning or placing highly.
 - Business impact — clear examples of how you solved a company problem and delivered measurable results.
 
-If you don’t have those yet, don’t focus only on “how to write” the résumé. Instead, think first about how you can create positive impact and measurable value with your current data science skill set. If you lack the skills to achieve that impact right now, make it your priority to improve them quickly.
-You don’t need to know everything before delivering results — focus on mastering the fundamentals, then build real projects and fill in the gaps as you go. In today’s fast-changing world, spending too much time learning one thing before applying it may not be the best strategy.
+If you don't have those yet, don't focus only on "how to write" the résumé. Instead, think first about how you can create positive impact and measurable value with your current data science skill set. If you lack the skills to achieve that impact right now, make it your priority to improve them quickly. You don't need to know everything before delivering results — focus on mastering the fundamentals, then build real projects and fill in the gaps as you go. In today's fast-changing world, spending too much time learning one thing before applying it may not be the best strategy.
 
-If you are a beginner, ask: “How to study to become a data scientist as a beginner?”
-If you’d like to know how I studied deep learning, ask: “What is your curriculum for studying deep learning?”
-If you’d like to know how I studied Agentic AI, RAG, and LLM, ask: “What is your curriculum for studying Agentic AI, RAG, and LLM?”
-
-
+Follow-up prompts:
+- If you are a beginner, ask: "How to study to become a data scientist as a beginner?"
+- If you'd like to know how I studied deep learning, ask: "What is your curriculum for studying deep learning?"
+- If you'd like to know how I studied Agentic AI, RAG, and LLM, ask: "What is your curriculum for studying Agentic AI, RAG, and LLM?"

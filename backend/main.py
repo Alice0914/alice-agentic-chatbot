@@ -1,3 +1,4 @@
+import os
 import threading
 import requests as http
 from fastapi import FastAPI, HTTPException
@@ -6,6 +7,8 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from typing import List
 from chatbot import Me
+
+_VERIFY_SSL = os.getenv("SSL_VERIFY", "true").lower() != "false"
 
 app = FastAPI(title="AliceBot API", version="1.0.0")
 
@@ -61,9 +64,9 @@ async def chat(request: ChatRequest):
 @app.post("/api/visit")
 async def record_visit():
     try:
-        current = http.get(FIREBASE_URL, timeout=5).json() or 0
+        current = http.get(FIREBASE_URL, timeout=5, verify=_VERIFY_SSL).json() or 0
         new_count = current + 1
-        http.put(FIREBASE_URL, json=new_count, timeout=5)
+        http.put(FIREBASE_URL, json=new_count, timeout=5, verify=_VERIFY_SSL)
         return {"count": new_count}
     except Exception as e:
         print(f"Visit counter error: {e}")
