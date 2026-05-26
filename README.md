@@ -114,15 +114,15 @@ alice-agentic-chatbot/
 │   │       └── ChatInput.jsx
 │   ├── vite.config.js
 │   └── package.json
-├── me/
-│   ├── Resume_chatbot.pdf              # Resume — embedded into RAG index
-│   ├── AI_Engineering_2025_490p.pdf    # Reference book — embedded into RAG index
-│   └── summary.txt                     # Bio, study curriculum, side projects — embedded into RAG index
+├── me/                     # Source documents (not committed — see note below)
+│   └── ...                 # Original PDFs and text used to build the RAG index
 ├── vector_index/
 │   └── index.pkl           # Pre-built embedding index (texts + vectors)
 └── api/
     └── index.py            # Vercel serverless entry point
 ```
+
+> **Note on `me/`:** The original source documents used to build the RAG index live in this folder locally, but they are **not committed to GitHub** for copyright and privacy reasons. The prebuilt `vector_index/index.pkl` is included, so the chatbot runs without needing the originals.
 
 ---
 
