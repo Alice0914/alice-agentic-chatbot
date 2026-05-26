@@ -1,5 +1,7 @@
 # AliceBot — Personal AI Mentoring Assistant
 
+![AliceBot demo](assets/demo.gif)
+
 > 🚀 **Introducing My Personal Mentoring Assistant: Alice RAG Chatbot!**
 >
 > While mentoring junior developers and people preparing for career transitions, I often found myself thinking:
